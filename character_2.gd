@@ -6,8 +6,7 @@ const upLook_limit = -45 #Limit of looking up (degrees)
 const downLook_limit = 0  # Limit of looking down (degrees)
 
 #Jumping variables
-var double_jump = 0   
-var jump = 0
+var jumps_remaining = 2
 
 #Movement variables
 var acc_left = 0
@@ -27,33 +26,28 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-		jump = 1
+	else:
+		jumps_remaining = 2
 
 	#Character Jump
-	if Input.is_action_just_pressed("ui_accept")and double_jump<2 and (jump==0 or double_jump==1):
+	if Input.is_action_just_pressed("jump") and jumps_remaining > 0:
 		velocity.y = JUMP_VELOCITY
-		double_jump=double_jump + 1
-	
-	#Double Jump
-	if is_on_floor() and Input.is_action_just_pressed("ui_accept")==false:
-		double_jump = 0
-		jump = 0	
-	
+
 	# get directional imput and calculate vectors
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("left"):
 		acc_left = SPEED
 	else:
 		acc_left = 0
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("right"):
 		acc_right = SPEED
 	else:
 		acc_right = 0
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("backwards"):
 		acc_down = SPEED
 	else:
 		acc_down = 0
-	if Input.is_action_pressed("ui_up"):
-		acc_up =SPEED
+	if Input.is_action_pressed("forewards"):
+		acc_up = SPEED
 	else:
 		acc_up = 0
 	acc_x = acc_right - acc_left
