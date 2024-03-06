@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://dg038k7b3h4gb"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_dy50d"]
+[ext_resource type="Texture2D" uid="uid://cbo334yc8v2fu" path="res://assets/assets/monster_sprites.png" id="1_lcd4s"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0mdwt"]
+height = 2.13962
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp0ui"]
+atlas = ExtResource("1_lcd4s")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrgxn"]
+atlas = ExtResource("1_lcd4s")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2rdq"]
+atlas = ExtResource("1_lcd4s")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84td7"]
+atlas = ExtResource("1_lcd4s")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mdcbf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp0ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrgxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2rdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84td7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="enemy" type="CharacterBody3D"]
+script = ExtResource("1_dy50d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00660706, -0.184995, 0)
+shape = SubResource("CapsuleShape3D_0mdwt")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_mdcbf")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.0462284
