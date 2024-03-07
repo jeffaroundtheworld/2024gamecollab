@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cncjtya0ro6b0"
-path.s3tc="res://.godot/imported/material_20_baseColor.jpeg-ce3591f55c0fd96bc1765cc2099f412b.s3tc.ctex"
+path.s3tc="res://.godot/imported/material_20_baseColor.jpeg-4b8f727ac2679e74e81454699d1c37e3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://abandoned_hospital_part_two/textures/material_20_baseColor.jpeg"
-dest_files=["res://.godot/imported/material_20_baseColor.jpeg-ce3591f55c0fd96bc1765cc2099f412b.s3tc.ctex"]
+source_file="res://HOSPITAL PART 2/abandoned_hospital_part_two/textures/material_20_baseColor.jpeg"
+dest_files=["res://.godot/imported/material_20_baseColor.jpeg-4b8f727ac2679e74e81454699d1c37e3.s3tc.ctex"]
 
 [params]
 
