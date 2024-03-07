@@ -44,8 +44,6 @@ animations = [{
 
 [node name="enemy" type="CharacterBody3D"]
 script = ExtResource("1_dy50d")
-move_speed = null
-attack_range = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00660706, -0.184995, 0)
@@ -56,4 +54,4 @@ billboard = 2
 sprite_frames = SubResource("SpriteFrames_mdcbf")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.505281
+frame_progress = 0.146795
