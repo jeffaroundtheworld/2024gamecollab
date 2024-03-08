@@ -32,6 +32,7 @@ func _physics_process(delta):
 	#Character Jump
 	if Input.is_action_just_pressed("jump") and jumps_remaining > 0:
 		velocity.y = JUMP_VELOCITY
+		jumps_remaining -= 1
 
 	# get directional imput and calculate vectors
 	if Input.is_action_pressed("left"):
