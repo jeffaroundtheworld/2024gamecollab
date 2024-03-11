@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dg038k7b3h4gb"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_dy50d"]
-[ext_resource type="Texture2D" uid="uid://cbo334yc8v2fu" path="res://assets/assets/monster_sprites.png" id="1_lcd4s"]
+[ext_resource type="Script" path="res://enemy/enemy.gd" id="1_dy50d"]
+[ext_resource type="Texture2D" uid="uid://cbo334yc8v2fu" path="res://enemy/assets/assets/monster_sprites.png" id="1_lcd4s"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0mdwt"]
 height = 2.13962
@@ -44,8 +44,6 @@ animations = [{
 
 [node name="enemy" type="CharacterBody3D"]
 script = ExtResource("1_dy50d")
-move_speed = null
-attack_range = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00660706, -0.184995, 0)

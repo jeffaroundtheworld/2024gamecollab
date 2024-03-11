@@ -2,29 +2,29 @@
 
 [ext_resource type="Script" path="res://character_2.gd" id="1_3trxw"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_y6er6"]
+[sub_resource type="SphereMesh" id="SphereMesh_b2ff6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxbo6"]
 albedo_color = Color(0, 0.466667, 1, 1)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7kn4q"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_avnf5"]
 
-[node name="Character test" type="CharacterBody3D"]
+[node name="player" type="CharacterBody3D"]
 script = ExtResource("1_3trxw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_y6er6")
+mesh = SubResource("SphereMesh_b2ff6")
 surface_material_override/0 = SubResource("StandardMaterial3D_kxbo6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00923729, 0, 0)
-shape = SubResource("CapsuleShape3D_7kn4q")
+shape = SubResource("SphereShape3D_avnf5")
 
 [node name="CameraPivot" type="Node3D" parent="."]
-transform = Transform3D(0.989538, -0.0605143, 0.130965, 0, 0.907777, 0.419452, -0.14427, -0.415064, 0.898281, -0.0556524, 0.731018, -0.0998977)
+transform = Transform3D(0.989538, -0.0605143, 0.130965, 0, 0.907777, 0.419452, -0.14427, -0.415064, 0.898281, -0.0556524, -0.0154109, -0.0998977)
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
-transform = Transform3D(1, -3.72529e-09, 1.63913e-07, 0, 0.866026, -0.5, 2.98023e-08, 0.5, 0.866025, 0, 0.0585467, 0.0270523)
+transform = Transform3D(1, 0, 0, 0, 0.866026, -0.5, 0, 0.5, 0.866025, 0, 0, 0)
 
 [node name="SpotLight" type="SpotLight3D" parent="CameraPivot"]
 transform = Transform3D(1, 0, 0, 0, 0.906308, -0.422618, 0, 0.422618, 0.906307, 0.040658, -0.030842, 0.103489)
