@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccgt4rb73ohf1"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_4fe3q"]
+[ext_resource type="Texture2D" uid="uid://bjq444if2pewf" path="res://Cookie_tutorial_texture_2.png" id="2_yilxy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqhxq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ap72o"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_4fe3q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_eqhxq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_ap72o")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679457, 0)
+
+[node name="Hand" type="Node3D" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Hand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.835, 0, -0.57)
+light_volumetric_fog_energy = 16.0
+light_projector = ExtResource("2_yilxy")
+shadow_enabled = true
+spot_range = 30.0
+spot_angle = 30.0
