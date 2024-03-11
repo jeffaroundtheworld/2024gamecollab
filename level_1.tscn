@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbjcyl4hbu56s"]
+[gd_scene load_steps=6 format=3 uid="uid://cbjcyl4hbu56s"]
 
-[ext_resource type="PackedScene" uid="uid://cl6mo4ed5xv62" path="res://character_2.tscn" id="1_1ggjh"]
 [ext_resource type="Texture2D" uid="uid://tt1gygl7iao4" path="res://bright-rainbow-colored-rectangle-mosaic-seamless-vector-2639200.jpg" id="1_ggotv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1w4tl"]
@@ -24,9 +23,6 @@ mesh = SubResource("BoxMesh_5o8xc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_l8l6q")
-
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_1ggjh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_41k3x")
