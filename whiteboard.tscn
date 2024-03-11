@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=2 format=3 uid="uid://b1iudjhildih1"]
 
 [ext_resource type="PackedScene" path="res://school_board/scene.gltf" id="1_ddd8f"]
+=======
+[gd_scene load_steps=2 format=3 uid="uid://f053u2rqhbl"]
+
+[ext_resource type="PackedScene" uid="uid://cejkwqhdu7nq2" path="res://school_board/scene.gltf" id="1_ddd8f"]
+>>>>>>> Stashed changes
 
 [node name="Node3D" type="Node3D"]
 

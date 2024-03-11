@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old School Chair
+* source:	https://sketchfab.com/3d-models/old-school-chair-328ef4d142f846ada819215e9cc60007
+* author:	FaceTheEdge (https://sketchfab.com/faceTheEdge)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old School Chair" (https://sketchfab.com/3d-models/old-school-chair-328ef4d142f846ada819215e9cc60007) by FaceTheEdge (https://sketchfab.com/faceTheEdge) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
