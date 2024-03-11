@@ -1,6 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://k5f3yqg0mwsv"]
+[gd_scene load_steps=15 format=3 uid="uid://dbnql13ycusy6"]
 
-[ext_resource type="PackedScene" uid="uid://ccgt4rb73ohf1" path="res://Player.tscn" id="1_vxeqb"]
+[ext_resource type="Script" path="res://Player.gd" id="1_nwblu"]
+[ext_resource type="Texture2D" uid="uid://bjq444if2pewf" path="res://Cookie_tutorial_texture_2.png" id="2_i4o2o"]
+[ext_resource type="PackedScene" uid="uid://pks6uvct27hy" path="res://2d enemy/enemy.tscn" id="3_x12f0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fmf5i"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -23,6 +25,10 @@ size = Vector3(20, 1, 20)
 [sub_resource type="BoxMesh" id="BoxMesh_hsp8v"]
 size = Vector3(20, 1, 20)
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqhxq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ap72o"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ldk8w"]
 albedo_color = Color(0.788235, 0.113725, 0, 1)
 
@@ -38,13 +44,12 @@ albedo_color = Color(0.788235, 0.113725, 0, 1)
 environment = SubResource("Environment_g27x1")
 
 [node name="Ground" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.40737, 0)
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -2.40737, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("BoxShape3D_ga6oc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.229212, -0.270393, 0.0547757)
 mesh = SubResource("BoxMesh_hsp8v")
 
 [node name="Wall" type="StaticBody3D" parent="."]
@@ -54,9 +59,31 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -2.
 shape = SubResource("BoxShape3D_ga6oc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.8649, 4.76837e-07)
 mesh = SubResource("BoxMesh_hsp8v")
 
-[node name="Player" parent="." instance=ExtResource("1_vxeqb")]
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("1_nwblu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_eqhxq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_ap72o")
+
+[node name="Head" type="Node3D" parent="Player"]
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679457, 0)
+
+[node name="Hand" type="Node3D" parent="Player"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Player/Hand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.835, 0, -0.57)
+light_volumetric_fog_energy = 16.0
+light_projector = ExtResource("2_i4o2o")
+shadow_enabled = true
+spot_range = 30.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.20791, -5.73984)
@@ -93,3 +120,6 @@ skin = SubResource("Skin_obulh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4"]
 shape = SubResource("BoxShape3D_osijd")
+
+[node name="enemy" parent="." instance=ExtResource("3_x12f0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37602, 0.106423, 4.10483)
