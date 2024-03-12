@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Horror Game"
-run/main_scene="res://edit_character_3.tscn"
+run/main_scene="res://test scene/test scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
