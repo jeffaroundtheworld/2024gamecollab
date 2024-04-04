@@ -6,6 +6,7 @@ extends CharacterBody3D
 @export var cameraAcceleration = 5.0
 @export var jumpForce = 6.0 
 @export var gravity = 9.8 
+@export var attack = 0
 
 @onready var head =$Head
 @onready var camera = $Head/Camera3D
@@ -15,6 +16,8 @@ extends CharacterBody3D
 var direction = Vector3.ZERO
 var head_y_axis =0.0
 var camera_x_axis =0.0
+
+var health = 50
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -29,6 +32,12 @@ func _input(event):
 		get_tree().quit()
 	if Input.is_key_pressed(KEY_F11):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	
+	if attack == 1:
+		health-=1
+	if health < 1:
+		print ("dead")
+	print (health)
 	
 
 func _process(delta):
@@ -45,6 +54,7 @@ func _process(delta):
 		velocity.y += jumpForce
 	else:
 		velocity.y -= gravity * delta
+	
 
 
 
