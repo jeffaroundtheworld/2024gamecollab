@@ -12,4 +12,8 @@ func _process(delta):
 
 
 func _on_key_open_doors():
-	rotate_z(deg_to_rad(95))
+	rotate_y(deg_to_rad(-95))
+
+
+func _on_detector_body_entered(body):
+	pass # Replace with function body.

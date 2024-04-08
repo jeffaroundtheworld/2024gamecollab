@@ -11,4 +11,4 @@ func _process(delta):
 	pass
 
 func _on_key_open_doors():
-	rotate_z(deg_to_rad(-95))
+	rotate_y(deg_to_rad(95))
