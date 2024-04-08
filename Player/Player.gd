@@ -55,6 +55,7 @@ func _process(delta):
 			health = health-1
 	else:
 		print ("dead")
+	print(is_on_floor())
 
 
 

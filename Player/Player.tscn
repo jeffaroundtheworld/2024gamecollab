@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_ac7pe"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqhxq"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_74cdn"]
+margin = 0.1
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ap72o"]
 
@@ -10,7 +11,8 @@
 script = ExtResource("1_ac7pe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_eqhxq")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00033927, 0.0613812, -0.000641346)
+shape = SubResource("CapsuleShape3D_74cdn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_ap72o")

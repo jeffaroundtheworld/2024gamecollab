@@ -36,8 +36,7 @@ func _physics_process(delta):
 	
 "
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0mdwt"]
-height = 2.13962
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2dajd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fp0ui"]
 atlas = ExtResource("1_lcd4s")
@@ -76,11 +75,12 @@ animations = [{
 }]
 
 [node name="enemy" type="CharacterBody3D"]
+disable_mode = 2
 script = SubResource("GDScript_008ca")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00660706, -0.184995, 0)
-shape = SubResource("CapsuleShape3D_0mdwt")
+shape = SubResource("CylinderShape3D_2dajd")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 billboard = 2
@@ -88,3 +88,5 @@ sprite_frames = SubResource("SpriteFrames_mdcbf")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.221851
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]

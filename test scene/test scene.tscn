@@ -51,6 +51,7 @@ mesh = SubResource("BoxMesh_hsp8v")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -2.40737, -9.60223)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00363159, -11.9327, -0.0415921)
 shape = SubResource("BoxShape3D_ga6oc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Wall"]
@@ -94,6 +95,7 @@ skin = SubResource("Skin_obulh")
 shape = SubResource("BoxShape3D_osijd")
 
 [node name="enemy" parent="." instance=ExtResource("1_rxies")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37602, 0.106423, 4.10483)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02049, -0.020636, 3.97469)
 
 [node name="Player" parent="." instance=ExtResource("2_7nki8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410577, 0.0757339, 0.383091)
