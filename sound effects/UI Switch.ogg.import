@@ -2,11 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-<<<<<<< HEAD
-uid="uid://oxp3dk3y6ou1"
-=======
-uid="uid://b3p6eedgmrhfq"
->>>>>>> 2ff29f7d371ecbbeea79a082566ea54babf8d537
+uid="uid://bsadk48hl72jm"
 path="res://.godot/imported/UI Switch.ogg-60441f7825b2fd5e3511fb785f933b60.oggvorbisstr"
 
 [deps]

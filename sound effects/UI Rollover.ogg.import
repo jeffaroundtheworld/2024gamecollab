@@ -2,11 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-<<<<<<< HEAD
-uid="uid://6e1goqu0ci2k"
-=======
-uid="uid://cfckvyktj5p54"
->>>>>>> 2ff29f7d371ecbbeea79a082566ea54babf8d537
+uid="uid://7tw6stvy3tif"
 path="res://.godot/imported/UI Rollover.ogg-e377182dd8e346d749930590bd169241.oggvorbisstr"
 
 [deps]
