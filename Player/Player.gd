@@ -19,6 +19,7 @@ var head_y_axis =0.0
 var camera_x_axis =0.0
 var health = 150
 
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
