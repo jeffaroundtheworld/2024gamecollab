@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1iya05umqad8"
+path="res://.godot/imported/10 Minutes of CreepyScary Horror Background Sounds and Music.mp3-022ee4fc6fd21c8d5b54cd69fd4ae5f4.mp3str"
+
+[deps]
+
+source_file="res://sound effects/10 Minutes of CreepyScary Horror Background Sounds and Music.mp3"
+dest_files=["res://.godot/imported/10 Minutes of CreepyScary Horror Background Sounds and Music.mp3-022ee4fc6fd21c8d5b54cd69fd4ae5f4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

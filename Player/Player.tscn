@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cixijvg7bdjir"]
+[gd_scene load_steps=5 format=3 uid="uid://cixijvg7bdjir"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_ac7pe"]
+[ext_resource type="Script" path="res://Player/SpotLight3D.gd" id="2_rk60t"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqhxq"]
 
@@ -27,3 +28,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0351681, 0, -0.196824)
 light_volumetric_fog_energy = 16.0
 shadow_enabled = true
 spot_range = 30.0
+script = ExtResource("2_rk60t")
