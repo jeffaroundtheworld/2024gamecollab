@@ -2,7 +2,11 @@
 
 importer="mp3"
 type="AudioStreamMP3"
+<<<<<<< HEAD
+uid="uid://bxq82sgel602h"
+=======
 uid="uid://cc658pa6h78du"
+>>>>>>> 2ff29f7d371ecbbeea79a082566ea54babf8d537
 path="res://.godot/imported/Tinnitus sound effect.mp3-d879c648097c6232ec2124c065c4db16.mp3str"
 
 [deps]

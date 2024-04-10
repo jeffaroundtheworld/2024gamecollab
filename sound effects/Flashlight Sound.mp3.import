@@ -2,7 +2,11 @@
 
 importer="mp3"
 type="AudioStreamMP3"
+<<<<<<< HEAD
+uid="uid://dk6c0a6803xmt"
+=======
 uid="uid://xn064c81gbee"
+>>>>>>> 2ff29f7d371ecbbeea79a082566ea54babf8d537
 path="res://.godot/imported/Flashlight Sound.mp3-26125eb03957867dc0ec4a0b7975d052.mp3str"
 
 [deps]
