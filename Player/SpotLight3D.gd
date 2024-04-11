@@ -8,7 +8,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(light_energy)
 	if Input.is_action_just_pressed("on"):
 		$AudioStreamPlayer3D.stream = CorrectSound
 		$AudioStreamPlayer3D.play()

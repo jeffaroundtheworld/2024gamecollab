@@ -18,11 +18,11 @@ var direction = Vector3.ZERO
 var head_y_axis =0.0
 var camera_x_axis =0.0
 var health = 150
-
+var climb = 0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -36,19 +36,38 @@ func _input(event):
 	
 
 func _process(delta):
-	direction = Input.get_axis("left","right")* head.basis.x + Input.get_axis("forewards", "backwards") * head.basis.z
-	velocity = velocity.lerp(direction * playerSpeed + velocity.y * Vector3.UP, playerAcceleration * delta)
+	if get_tree().current_scene.name == "Sketchfab_Scene_1" and position.z>-0.4 and position.z<0.23 and position.x>33.1 and position.x<33.7 and position.y<5 and Input.is_key_pressed(KEY_W):
+		climb = 1
+	print(climb)
+	if climb == 1:
+		position.x = 33.460
+		position.z = -0.02
+		if Input.is_key_pressed(KEY_W):
+			velocity.y = 5
+		if Input.is_key_pressed(KEY_S):
+			velocity.y = -5
+			if position.y<1.9:
+				climb = 0
+		if !Input.is_key_pressed(KEY_S) and !Input.is_key_pressed(KEY_W):
+			velocity.y = 0
+		if position.y>14.5:
+			position.z = 1.5
+			climb = 0
+	
+	if climb == 0:
+		direction = Input.get_axis("left","right")* head.basis.x + Input.get_axis("forewards", "backwards") * head.basis.z
+		velocity = velocity.lerp(direction * playerSpeed + velocity.y * Vector3.UP, playerAcceleration * delta)
+		if Input.is_action_just_pressed("jump") and is_on_floor():
+			velocity.y += jumpForce
+		else:
+			velocity.y -= gravity * delta
 	
 	head.rotation.y = lerp(head.rotation.y, -deg_to_rad(head_y_axis), cameraAcceleration *delta )
 	camera.rotation.x = lerp(camera.rotation.x, -deg_to_rad(camera_x_axis), cameraAcceleration *delta )
 	
 	hand.rotation.y = -deg_to_rad(head_y_axis)
 	flashlight.rotation.x = -deg_to_rad(camera_x_axis)
-	
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y += jumpForce
-	else:
-		velocity.y -= gravity * delta
+		
 	
 	if health>0:
 		if attack == 1:
