@@ -22,7 +22,7 @@ var climb = 0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -38,7 +38,6 @@ func _input(event):
 func _process(delta):
 	if get_tree().current_scene.name == "Sketchfab_Scene_1" and position.z>-0.4 and position.z<0.23 and position.x>33.1 and position.x<33.7 and position.y<5 and Input.is_key_pressed(KEY_W):
 		climb = 1
-	print(climb)
 	if climb == 1:
 		position.x = 33.460
 		position.z = -0.02
@@ -74,7 +73,4 @@ func _process(delta):
 			health = health-1
 	else:
 		print ("dead")
-
-
-
 	move_and_slide()
