@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://cd1hkxyrjc7gp"]
+
+[ext_resource type="Texture2D" uid="uid://bobnruaqhm47x" path="res://Player/blood10.png" id="1_tpsr5"]
+[ext_resource type="Script" path="res://Player/camera_3d.gd" id="1_u0ul8"]
+
+[sub_resource type="Animation" id="Animation_lvedg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6s4wv"]
+resource_name = "damage"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2ddfc"]
+_data = {
+"RESET": SubResource("Animation_lvedg"),
+"damage": SubResource("Animation_6s4wv")
+}
+
+[node name="Camera3D" type="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679457, 0)
+script = ExtResource("1_u0ul8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1924.0
+offset_bottom = 1083.0
+texture = ExtResource("1_tpsr5")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../TextureRect")
+libraries = {
+"": SubResource("AnimationLibrary_2ddfc")
+}

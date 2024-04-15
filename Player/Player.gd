@@ -14,10 +14,11 @@ extends CharacterBody3D
 @onready var hand = $Hand
 @onready var flashlight = $Hand/SpotLight3D
 
+
 var direction = Vector3.ZERO
 var head_y_axis =0.0
 var camera_x_axis =0.0
-var health = 150
+var health = 100
 var climb = 0
 
 func _ready():
@@ -32,11 +33,11 @@ func _input(event):
 	
 	if Input.is_key_pressed(KEY_ESCAPE):
 		get_tree().quit()
-		
+	
 	
 
 func _process(delta):
-	if get_tree().current_scene.name == "Sketchfab_Scene_1" and position.z>-0.4 and position.z<0.23 and position.x>33.1 and position.x<33.7 and position.y<5 and Input.is_key_pressed(KEY_W):
+	if get_tree().current_scene.name == "Sketchfab_Scene_1" and position.z>-0.4 and position.z<0.23 and position.x>33.1 and position.x<33.7 and position.y<5 and Input.is_key_pressed(KEY_W) and head_y_axis<(-90) and head_y_axis>(-270):
 		climb = 1
 	if climb == 1:
 		position.x = 33.460
@@ -52,7 +53,6 @@ func _process(delta):
 		if position.y>14.5:
 			position.z = 1.5
 			climb = 0
-	
 	if climb == 0:
 		direction = Input.get_axis("left","right")* head.basis.x + Input.get_axis("forewards", "backwards") * head.basis.z
 		velocity = velocity.lerp(direction * playerSpeed + velocity.y * Vector3.UP, playerAcceleration * delta)
@@ -66,11 +66,15 @@ func _process(delta):
 	
 	hand.rotation.y = -deg_to_rad(head_y_axis)
 	flashlight.rotation.x = -deg_to_rad(camera_x_axis)
-		
+	
 	
 	if health>0:
 		if attack == 1:
 			health = health-1
+			camera.damages = 1
+		else:
+			camera.damages = 0
 	else:
-		print ("dead")
+		get_tree().quit()
+		
 	move_and_slide()
