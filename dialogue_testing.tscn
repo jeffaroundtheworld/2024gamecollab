@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctmkhygxtu8hw"]
+
+[ext_resource type="Texture2D" uid="uid://dnl1hh3ric3la" path="res://SPRITES/friend1.PNG" id="1_8dg60"]
+[ext_resource type="Texture2D" uid="uid://bn2ja8gpbwkov" path="res://SPRITES/friend2.PNG" id="2_vsifw"]
+[ext_resource type="Texture2D" uid="uid://olmwtxbgnnqn" path="res://SPRITES/friend3.PNG" id="3_cql51"]
+[ext_resource type="Texture2D" uid="uid://dfgppqmoq5buu" path="res://SPRITES/player1.PNG" id="4_vy81d"]
+[ext_resource type="Texture2D" uid="uid://1fewf0t8uhtu" path="res://SPRITES/player2.PNG" id="5_5q72a"]
+[ext_resource type="Texture2D" uid="uid://cikqvxk27nj4r" path="res://SPRITES/player3.PNG" id="6_yg8t3"]
+
+[sub_resource type="Theme" id="Theme_tu7al"]
+default_font_size = 1
+
+[node name="dialogue testing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 421.0
+offset_right = 1012.0
+offset_bottom = 630.0
+theme = SubResource("Theme_tu7al")
+
+[node name="Friend1" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(994.125, 653.625)
+scale = Vector2(0.822877, 0.804093)
+texture = ExtResource("1_8dg60")
+
+[node name="Friend2" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(994.125, 653.625)
+scale = Vector2(0.822877, 0.804093)
+texture = ExtResource("2_vsifw")
+
+[node name="Friend3" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(994.125, 653.625)
+scale = Vector2(0.822877, 0.804093)
+texture = ExtResource("3_cql51")
+
+[node name="Player1" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(191, 623)
+scale = Vector2(0.804054, 0.776967)
+texture = ExtResource("4_vy81d")
+
+[node name="Player2" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(191, 623)
+scale = Vector2(0.804054, 0.776967)
+texture = ExtResource("5_5q72a")
+
+[node name="Player3" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(191, 623)
+scale = Vector2(0.804054, 0.776967)
+texture = ExtResource("6_yg8t3")
