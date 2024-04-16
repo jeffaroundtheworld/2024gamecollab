@@ -33,3 +33,5 @@ spot_range = 30.0
 script = ExtResource("2_rk60t")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hand/SpotLight3D"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
