@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dub05mq7an7wx"]
+[gd_scene load_steps=5 format=3 uid="uid://dub05mq7an7wx"]
 
 [ext_resource type="Script" path="res://Menu Screen/Main_Menu.gd" id="1_q615w"]
 [ext_resource type="AudioStream" uid="uid://d1iya05umqad8" path="res://sound effects/10 Minutes of CreepyScary Horror Background Sounds and Music.mp3" id="2_3oy4p"]
+[ext_resource type="FontFile" uid="uid://cma4rnr8wy8ky" path="res://Menu Screen/Heartless.ttf" id="2_djwu6"]
+[ext_resource type="VideoStream" path="res://Menu Screen/menu video/menu-screen.ogv" id="2_jwgd7"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,6 +13,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q615w")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1155.0
+offset_bottom = 656.0
+stream = ExtResource("2_jwgd7")
+autoplay = true
+loop = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
