@@ -1,14 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctmkhygxtu8hw"]
+[gd_scene load_steps=11 format=3 uid="uid://ctmkhygxtu8hw"]
 
 [ext_resource type="Texture2D" uid="uid://dnl1hh3ric3la" path="res://SPRITES/friend1.PNG" id="1_8dg60"]
+[ext_resource type="Script" path="res://dialogue box.gd" id="1_8ocke"]
+[ext_resource type="Texture2D" uid="uid://cpvdcnjcd72kf" path="res://SPRITES/PngItem_2721759.png" id="2_03n83"]
 [ext_resource type="Texture2D" uid="uid://bn2ja8gpbwkov" path="res://SPRITES/friend2.PNG" id="2_vsifw"]
 [ext_resource type="Texture2D" uid="uid://olmwtxbgnnqn" path="res://SPRITES/friend3.PNG" id="3_cql51"]
+[ext_resource type="FontFile" uid="uid://deiongrrc18es" path="res://fonts/SplendidB.ttf" id="3_dxcuw"]
 [ext_resource type="Texture2D" uid="uid://dfgppqmoq5buu" path="res://SPRITES/player1.PNG" id="4_vy81d"]
 [ext_resource type="Texture2D" uid="uid://1fewf0t8uhtu" path="res://SPRITES/player2.PNG" id="5_5q72a"]
 [ext_resource type="Texture2D" uid="uid://cikqvxk27nj4r" path="res://SPRITES/player3.PNG" id="6_yg8t3"]
 
-[sub_resource type="Theme" id="Theme_tu7al"]
-default_font_size = 1
+[sub_resource type="FontVariation" id="FontVariation_c33s5"]
+base_font = ExtResource("3_dxcuw")
+spacing_space = 2
+spacing_top = 2
+spacing_bottom = -6
 
 [node name="dialogue testing" type="Control"]
 layout_mode = 3
@@ -18,13 +24,48 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 132.0
-offset_top = 421.0
-offset_right = 1012.0
-offset_bottom = 630.0
-theme = SubResource("Theme_tu7al")
+[node name="dialogue box" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.511
+anchor_top = 0.968
+anchor_right = 0.511
+anchor_bottom = 0.968
+offset_left = -452.672
+offset_top = -186.264
+offset_right = 452.328
+offset_bottom = -0.264038
+script = ExtResource("1_8ocke")
+metadata/_edit_group_ = true
+
+[node name="box" type="TextureRect" parent="dialogue box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_03n83")
+
+[node name="text" type="RichTextLabel" parent="dialogue box"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 0.318
+anchor_right = 0.966
+anchor_bottom = 0.943
+offset_right = 1.0
+theme_override_colors/default_color = Color(0.760784, 0.713726, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/text_highlight_h_padding = 0
+theme_override_fonts/normal_font = SubResource("FontVariation_c33s5")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "Hello im a placeholder :3
+I love placeholding, its always been my dream to be a placeholder. Yipee!!
+Heheheheh teehee im a silly line of text"
+visible_characters = 32
+visible_ratio = 0.232
 
 [node name="Friend1" type="Sprite2D" parent="."]
 show_behind_parent = true
