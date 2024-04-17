@@ -1,0 +1,20 @@
+
+[gd_scene load_steps=4 format=3 uid="uid://cuhwa0ohibysb"]
+
+[ext_resource type="PackedScene" uid="uid://c02gbhxbgtgn2" path="res://key_with_ring_and_tag/scene.gltf" id="1_gcjco"]
+
+[ext_resource type="Script" path="res://key.gd" id="1_vdnrv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vtuss"]
+
+[node name="Node3D" type="Area3D"]
+script = ExtResource("1_vdnrv")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_gcjco")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1.08865, 0, 2.033)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.271044, 2.54678, 0, -1.6854, 0.409569, 0, 0, 0, 1.46849, -1.08347, 0, 2.14576)
+shape = SubResource("CapsuleShape3D_vtuss")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

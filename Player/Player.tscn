@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cixijvg7bdjir"]
+[gd_scene load_steps=6 format=3 uid="uid://cixijvg7bdjir"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_ac7pe"]
+[ext_resource type="Script" path="res://Player/SpotLight3D.gd" id="2_rk60t"]
+[ext_resource type="PackedScene" path="res://Player/camera_3d.tscn" id="2_vg3qm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqhxq"]
+radius = 0.3
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ap72o"]
+radius = 0.3
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_ac7pe")
@@ -17,13 +21,17 @@ mesh = SubResource("CapsuleMesh_ap72o")
 
 [node name="Head" type="Node3D" parent="."]
 
-[node name="Camera3D" type="Camera3D" parent="Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679457, 0)
+[node name="Camera3D" parent="Head" instance=ExtResource("2_vg3qm")]
 
 [node name="Hand" type="Node3D" parent="."]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Hand"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.835, 0, -0.57)
-light_volumetric_fog_energy = 16.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0351681, 0, -0.196824)
+light_volumetric_fog_energy = 0.0
 shadow_enabled = true
 spot_range = 30.0
+script = ExtResource("2_rk60t")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hand/SpotLight3D"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
