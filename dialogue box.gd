@@ -11,13 +11,20 @@ var finished = false
 
 
 func _ready():
-	play_dialoue()
-
-func play_dialogue():
-	if dialogie_list < dialogue.size(:)
-
-
+	play_dialogue()
+	$playersprite.frame=0
 
 
 func _process(delta):
-	pass
+	if Input.is_key_pressed(KEY_ENTER):
+		play_dialogue()
+		$playersprite.frame+=1
+
+	
+
+func play_dialogue():
+	if dialogue_list < dialogue.size():
+		$text.bbcode_text = dialogue[dialogue_list]
+	else:
+		queue_free()
+	dialogue_list += 1

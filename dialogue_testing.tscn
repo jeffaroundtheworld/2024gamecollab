@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ctmkhygxtu8hw"]
+[gd_scene load_steps=15 format=3 uid="uid://ctmkhygxtu8hw"]
 
 [ext_resource type="Texture2D" uid="uid://dnl1hh3ric3la" path="res://SPRITES/friend1.PNG" id="1_8dg60"]
 [ext_resource type="Script" path="res://dialogue box.gd" id="1_8ocke"]
@@ -9,12 +9,41 @@
 [ext_resource type="Texture2D" uid="uid://dfgppqmoq5buu" path="res://SPRITES/player1.PNG" id="4_vy81d"]
 [ext_resource type="Texture2D" uid="uid://1fewf0t8uhtu" path="res://SPRITES/player2.PNG" id="5_5q72a"]
 [ext_resource type="Texture2D" uid="uid://cikqvxk27nj4r" path="res://SPRITES/player3.PNG" id="6_yg8t3"]
+[ext_resource type="Texture2D" uid="uid://cm7xno4k1t876" path="res://SPRITES/player4.PNG" id="7_6235j"]
+[ext_resource type="Texture2D" uid="uid://bjj0e3m4l1ipp" path="res://SPRITES/player5.PNG" id="8_sunc5"]
+[ext_resource type="Texture2D" uid="uid://djbnnq7p5db5a" path="res://SPRITES/player6.PNG" id="9_ysl75"]
 
 [sub_resource type="FontVariation" id="FontVariation_c33s5"]
 base_font = ExtResource("3_dxcuw")
 spacing_space = 2
 spacing_top = 2
 spacing_bottom = -6
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n3qiw"]
+animations = [{
+"frames": [{
+"duration": 1.1,
+"texture": ExtResource("4_vy81d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5q72a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yg8t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6235j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sunc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ysl75")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="dialogue testing" type="Control"]
 layout_mode = 3
@@ -64,8 +93,14 @@ bbcode_enabled = true
 text = "Hello im a placeholder :3
 I love placeholding, its always been my dream to be a placeholder. Yipee!!
 Heheheheh teehee im a silly line of text"
-visible_characters = 32
-visible_ratio = 0.232
+
+[node name="playersprite" type="AnimatedSprite2D" parent="dialogue box"]
+show_behind_parent = true
+position = Vector2(52, 179.188)
+scale = Vector2(0.830599, 0.773874)
+sprite_frames = SubResource("SpriteFrames_n3qiw")
+
+[node name="animation test" type="Sprite2D" parent="."]
 
 [node name="Friend1" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -86,18 +121,21 @@ scale = Vector2(0.822877, 0.804093)
 texture = ExtResource("3_cql51")
 
 [node name="Player1" type="Sprite2D" parent="."]
+visible = false
 show_behind_parent = true
 position = Vector2(191, 623)
 scale = Vector2(0.804054, 0.776967)
 texture = ExtResource("4_vy81d")
 
 [node name="Player2" type="Sprite2D" parent="."]
+visible = false
 show_behind_parent = true
 position = Vector2(191, 623)
 scale = Vector2(0.804054, 0.776967)
 texture = ExtResource("5_5q72a")
 
 [node name="Player3" type="Sprite2D" parent="."]
+visible = false
 show_behind_parent = true
 position = Vector2(191, 623)
 scale = Vector2(0.804054, 0.776967)
