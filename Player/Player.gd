@@ -13,6 +13,7 @@ extends CharacterBody3D
 @onready var camera = $Head/Camera3D
 @onready var hand = $Hand
 @onready var flashlight = $Hand/SpotLight3D
+@onready var walk = $AnimationPlayer
 
 
 var direction = Vector3.ZERO
@@ -24,7 +25,7 @@ var CorrectSound = preload("res://Player/concrete-footsteps-6752.mp3")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -38,12 +39,14 @@ func _input(event):
 	
 
 func _process(delta):
-	print(velocity.z)
-	if velocity.z>0.5 or velocity.z<(-0.5) or velocity.x>0.5 or velocity.x<(-0.5):
-		$AudioStreamPlayer3D.stream = CorrectSound
-		$AudioStreamPlayer3D.play()
-	else:
+	print(is_on_floor)
+	if abs(velocity.x)>0.5 or abs(velocity.z)>0.5:
+		if !$AudioStreamPlayer3D.is_playing():
+			$AudioStreamPlayer3D.stream = CorrectSound
+			$AudioStreamPlayer3D.play()
+	else: 
 		$AudioStreamPlayer3D.stop()
+		
 	if get_tree().current_scene.name == "Sketchfab_Scene_1" and position.z>-0.4 and position.z<0.23 and position.x>33.1 and position.x<33.7 and position.y<5 and Input.is_key_pressed(KEY_W) and head_y_axis<(-90) and head_y_axis>(-270):
 		climb = 1
 	if climb == 1:
