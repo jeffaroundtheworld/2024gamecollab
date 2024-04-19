@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ctmkhygxtu8hw"]
+[gd_scene load_steps=21 format=3 uid="uid://ctmkhygxtu8hw"]
 
 [ext_resource type="Texture2D" uid="uid://dnl1hh3ric3la" path="res://SPRITES/friend1.PNG" id="1_8dg60"]
 [ext_resource type="Script" path="res://dialogue box.gd" id="1_8ocke"]
@@ -10,14 +10,44 @@
 [ext_resource type="Texture2D" uid="uid://1fewf0t8uhtu" path="res://SPRITES/player2.PNG" id="5_5q72a"]
 [ext_resource type="Texture2D" uid="uid://cikqvxk27nj4r" path="res://SPRITES/player3.PNG" id="6_yg8t3"]
 [ext_resource type="Texture2D" uid="uid://cm7xno4k1t876" path="res://SPRITES/player4.PNG" id="7_6235j"]
+[ext_resource type="Texture2D" uid="uid://cmebs5vljb6qp" path="res://SPRITES/friend4.PNG" id="7_xtat2"]
+[ext_resource type="Texture2D" uid="uid://h6vqul05c0bt" path="res://SPRITES/friend5.PNG" id="8_7dggt"]
 [ext_resource type="Texture2D" uid="uid://bjj0e3m4l1ipp" path="res://SPRITES/player5.PNG" id="8_sunc5"]
+[ext_resource type="Texture2D" uid="uid://clacstn0wqoyd" path="res://SPRITES/friend6.PNG" id="9_t2v74"]
 [ext_resource type="Texture2D" uid="uid://djbnnq7p5db5a" path="res://SPRITES/player6.PNG" id="9_ysl75"]
+[ext_resource type="FontFile" uid="uid://b78n17gtfspr6" path="res://fonts/SplendidN.ttf" id="16_8loir"]
 
 [sub_resource type="FontVariation" id="FontVariation_c33s5"]
 base_font = ExtResource("3_dxcuw")
 spacing_space = 2
 spacing_top = 2
 spacing_bottom = -6
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rmnih"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8dg60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vsifw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cql51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xtat2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7dggt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t2v74")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n3qiw"]
 animations = [{
@@ -44,6 +74,10 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Theme" id="Theme_behuv"]
+default_font = ExtResource("16_8loir")
+default_font_size = 42
 
 [node name="dialogue testing" type="Control"]
 layout_mode = 3
@@ -75,6 +109,16 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_03n83")
 
+[node name="boxflipped" type="TextureRect" parent="dialogue box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_03n83")
+flip_h = true
+
 [node name="text" type="RichTextLabel" parent="dialogue box"]
 layout_mode = 1
 anchors_preset = -1
@@ -94,49 +138,39 @@ text = "Hello im a placeholder :3
 I love placeholding, its always been my dream to be a placeholder. Yipee!!
 Heheheheh teehee im a silly line of text"
 
-[node name="playersprite" type="AnimatedSprite2D" parent="dialogue box"]
+[node name="friendsprites" type="AnimatedSprite2D" parent="dialogue box"]
+show_behind_parent = true
+position = Vector2(860, 207.25)
+scale = Vector2(0.826255, 0.798541)
+sprite_frames = SubResource("SpriteFrames_rmnih")
+
+[node name="playersprites" type="AnimatedSprite2D" parent="dialogue box"]
 show_behind_parent = true
 position = Vector2(52, 179.188)
 scale = Vector2(0.830599, 0.773874)
 sprite_frames = SubResource("SpriteFrames_n3qiw")
 
-[node name="animation test" type="Sprite2D" parent="."]
+[node name="youlabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 436.0
+offset_right = 334.0
+offset_bottom = 478.0
+theme = SubResource("Theme_behuv")
+theme_override_colors/font_color = Color(0.760784, 0.713726, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0.403922, 0.160784, 0.0862745, 1)
+theme_override_constants/outline_size = 4
+text = "YOU"
 
-[node name="Friend1" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(994.125, 653.625)
-scale = Vector2(0.822877, 0.804093)
-texture = ExtResource("1_8dg60")
-
-[node name="Friend2" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(994.125, 653.625)
-scale = Vector2(0.822877, 0.804093)
-texture = ExtResource("2_vsifw")
-
-[node name="Friend3" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(994.125, 653.625)
-scale = Vector2(0.822877, 0.804093)
-texture = ExtResource("3_cql51")
-
-[node name="Player1" type="Sprite2D" parent="."]
+[node name="friendlabel" type="Label" parent="."]
 visible = false
-show_behind_parent = true
-position = Vector2(191, 623)
-scale = Vector2(0.804054, 0.776967)
-texture = ExtResource("4_vy81d")
-
-[node name="Player2" type="Sprite2D" parent="."]
-visible = false
-show_behind_parent = true
-position = Vector2(191, 623)
-scale = Vector2(0.804054, 0.776967)
-texture = ExtResource("5_5q72a")
-
-[node name="Player3" type="Sprite2D" parent="."]
-visible = false
-show_behind_parent = true
-position = Vector2(191, 623)
-scale = Vector2(0.804054, 0.776967)
-texture = ExtResource("6_yg8t3")
+layout_mode = 0
+offset_left = 236.0
+offset_top = 436.0
+offset_right = 395.0
+offset_bottom = 478.0
+theme = SubResource("Theme_behuv")
+theme_override_colors/font_color = Color(0.760784, 0.713726, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0.403922, 0.160784, 0.0862745, 1)
+theme_override_constants/outline_size = 4
+text = "FRIEND"
