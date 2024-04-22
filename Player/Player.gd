@@ -13,7 +13,6 @@ extends CharacterBody3D
 @onready var camera = $Head/Camera3D
 @onready var hand = $Hand
 @onready var flashlight = $Hand/SpotLight3D
-@onready var walk = $AnimationPlayer
 
 
 var direction = Vector3.ZERO
@@ -39,7 +38,13 @@ func _input(event):
 	
 
 func _process(delta):
-	print(is_on_floor)
+	#print(position.x, position.z)
+	if get_tree().current_scene.name == "Sketchfab_Scene_2": 
+		if position.x<-35.5 and position.x>-35.6:
+			position.x=-38.54
+		if position.x>-38.53 and position.x<-38.43:
+			position.x = -35.4
+		
 	if abs(velocity.x)>0.5 or abs(velocity.z)>0.5:
 		if !$AudioStreamPlayer3D.is_playing():
 			$AudioStreamPlayer3D.stream = CorrectSound

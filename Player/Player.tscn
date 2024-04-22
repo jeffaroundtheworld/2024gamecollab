@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_ac7pe"]
 [ext_resource type="Script" path="res://Player/SpotLight3D.gd" id="2_rk60t"]
-[ext_resource type="PackedScene" path="res://Player/camera_3d.tscn" id="2_vg3qm"]
+[ext_resource type="PackedScene" uid="uid://cd1hkxyrjc7gp" path="res://Player/camera_3d.tscn" id="2_vg3qm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqhxq"]
 radius = 0.3
@@ -22,7 +22,6 @@ mesh = SubResource("CapsuleMesh_ap72o")
 [node name="Head" type="Node3D" parent="."]
 
 [node name="Camera3D" parent="Head" instance=ExtResource("2_vg3qm")]
-current = true
 
 [node name="Hand" type="Node3D" parent="."]
 
