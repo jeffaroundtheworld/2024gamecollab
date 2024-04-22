@@ -9,7 +9,7 @@ script/source = "extends CharacterBody3D
 @export var move_speed = 2
 
 
-@onready var player = get_parent().get_node(\"Player\")
+@onready var player = get_parent().get_parent().get_node(\"Player\")
 var dir_x
 var dir_z
 const attack_range = 2
