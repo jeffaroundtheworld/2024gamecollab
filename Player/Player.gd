@@ -20,6 +20,7 @@ var head_y_axis =0.0
 var camera_x_axis =0.0
 var health = 100
 var climb = 0
+var CorrectSound = preload("res://Player/concrete-footsteps-6752.mp3")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -37,6 +38,20 @@ func _input(event):
 	
 
 func _process(delta):
+	#print(position.x, position.z)
+	if get_tree().current_scene.name == "Sketchfab_Scene_2": 
+		if position.x<-35.5 and position.x>-35.6:
+			position.x=-38.54
+		if position.x>-38.53 and position.x<-38.43:
+			position.x = -35.4
+		
+	if abs(velocity.x)>0.5 or abs(velocity.z)>0.5:
+		if !$AudioStreamPlayer3D.is_playing():
+			$AudioStreamPlayer3D.stream = CorrectSound
+			$AudioStreamPlayer3D.play()
+	else: 
+		$AudioStreamPlayer3D.stop()
+		
 	if get_tree().current_scene.name == "Sketchfab_Scene_1" and position.z>-0.4 and position.z<0.23 and position.x>33.1 and position.x<33.7 and position.y<5 and Input.is_key_pressed(KEY_W) and head_y_axis<(-90) and head_y_axis>(-270):
 		climb = 1
 	if climb == 1:
@@ -60,6 +75,7 @@ func _process(delta):
 			velocity.y += jumpForce
 		else:
 			velocity.y -= gravity * delta
+	
 	
 	head.rotation.y = lerp(head.rotation.y, -deg_to_rad(head_y_axis), cameraAcceleration *delta )
 	camera.rotation.x = lerp(camera.rotation.x, -deg_to_rad(camera_x_axis), cameraAcceleration *delta )

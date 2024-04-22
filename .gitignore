@@ -1,3 +1,4 @@
 # Godot 4+ specific ignores
 .godot/
 character_3_edit.gd
+*.import

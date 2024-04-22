@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://r74o7boqj3md"]
+
+[ext_resource type="FontFile" uid="uid://y17hwur7r1hw" path="res://Menu Screen/fonts/Heartless.ttf" id="1_ifhho"]
+[ext_resource type="Script" path="res://Button.gd" id="2_r5m4x"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 1169.0
+offset_bottom = 660.0
+color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[node name="title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 32.0
+offset_right = 1025.0
+offset_bottom = 249.0
+theme_override_fonts/font = ExtResource("1_ifhho")
+theme_override_font_sizes/font_size = 130
+text = "Credits "
+
+[node name="credits" type="Label" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 230.0
+offset_right = 646.0
+offset_bottom = 503.0
+theme_override_fonts/font = ExtResource("1_ifhho")
+theme_override_font_sizes/font_size = 45
+text = "Kod - Art/story design
+Zorien Markotic - nothing
+Jack Vallence - quality assurance
+Dylan Lockier - Team Genius "
+
+[node name="credits2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 616.0
+offset_top = 216.0
+offset_right = 1224.0
+offset_bottom = 489.0
+theme_override_fonts/font = ExtResource("1_ifhho")
+theme_override_font_sizes/font_size = 45
+text = "Zach Stevenson - Level Design
+Mya S.J. - graphics/level design
+Rhys watson - Everything
+AJ leach - credit screen maker"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 531.0
+offset_right = 680.0
+offset_bottom = 599.0
+theme_override_fonts/font = ExtResource("1_ifhho")
+theme_override_font_sizes/font_size = 41
+text = "menu"
+script = ExtResource("2_r5m4x")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0rw2glo2822r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_13ml8"]
+size = Vector3(1.35111, 0.0332031, 1.84424)
+
+[node name="fixstairs1" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.22045e-16, 0, -2.22045e-16, 1, 22.3974, 1.81923, -7.67036)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.908778, 0.41728, 0, -0.41728, 0.908778, 0, 0, 0, 1, -1.5065, -0.686446, 0.542321)
+shape = SubResource("BoxShape3D_13ml8")
