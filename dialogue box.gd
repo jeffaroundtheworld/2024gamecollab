@@ -31,7 +31,7 @@ func _process(delta):
 	if dialogue_list%2==0: 
 		$friendlabel.visible = true
 		$boxflipped.visible = true
-	elif $friendlabel.visible == true:
+	elif $friendlabel.visible == true: #get rid of this ordering fixed
 		$boxflipped.visible = true
 		$box.visible = false
 		$youlabel.visible = false
