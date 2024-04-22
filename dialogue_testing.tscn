@@ -17,6 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://djbnnq7p5db5a" path="res://SPRITES/player6.PNG" id="9_ysl75"]
 [ext_resource type="FontFile" uid="uid://b78n17gtfspr6" path="res://fonts/SplendidN.ttf" id="16_8loir"]
 
+[sub_resource type="Theme" id="Theme_behuv"]
+default_font = ExtResource("16_8loir")
+default_font_size = 42
+
 [sub_resource type="FontVariation" id="FontVariation_c33s5"]
 base_font = ExtResource("3_dxcuw")
 spacing_space = 2
@@ -75,10 +79,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Theme" id="Theme_behuv"]
-default_font = ExtResource("16_8loir")
-default_font_size = 42
-
 [node name="dialogue testing" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -100,7 +100,34 @@ offset_bottom = -0.264038
 script = ExtResource("1_8ocke")
 metadata/_edit_group_ = true
 
+[node name="youlabel" type="Label" parent="dialogue box"]
+visibility_layer = 4
+offset_left = 39.0
+offset_top = -4.99997
+offset_right = 198.0
+offset_bottom = 37.0
+theme = SubResource("Theme_behuv")
+theme_override_colors/font_color = Color(0.760784, 0.713726, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0.403922, 0.160784, 0.0862745, 1)
+theme_override_constants/outline_size = 4
+text = "YOU"
+
+[node name="friendlabel" type="Label" parent="dialogue box"]
+visibility_layer = 4
+layout_mode = 0
+offset_left = 708.0
+offset_top = -4.99997
+offset_right = 867.0
+offset_bottom = 37.0
+theme = SubResource("Theme_behuv")
+theme_override_colors/font_color = Color(0.760784, 0.713726, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0.403922, 0.160784, 0.0862745, 1)
+theme_override_constants/outline_size = 4
+text = "FRIEND"
+
 [node name="box" type="TextureRect" parent="dialogue box"]
+light_mask = 0
+visibility_layer = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -110,6 +137,7 @@ grow_vertical = 2
 texture = ExtResource("2_03n83")
 
 [node name="boxflipped" type="TextureRect" parent="dialogue box"]
+visibility_layer = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -149,28 +177,3 @@ show_behind_parent = true
 position = Vector2(52, 179.188)
 scale = Vector2(0.830599, 0.773874)
 sprite_frames = SubResource("SpriteFrames_n3qiw")
-
-[node name="youlabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 175.0
-offset_top = 436.0
-offset_right = 334.0
-offset_bottom = 478.0
-theme = SubResource("Theme_behuv")
-theme_override_colors/font_color = Color(0.760784, 0.713726, 0.662745, 1)
-theme_override_colors/font_outline_color = Color(0.403922, 0.160784, 0.0862745, 1)
-theme_override_constants/outline_size = 4
-text = "YOU"
-
-[node name="friendlabel" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 236.0
-offset_top = 436.0
-offset_right = 395.0
-offset_bottom = 478.0
-theme = SubResource("Theme_behuv")
-theme_override_colors/font_color = Color(0.760784, 0.713726, 0.662745, 1)
-theme_override_colors/font_outline_color = Color(0.403922, 0.160784, 0.0862745, 1)
-theme_override_constants/outline_size = 4
-text = "FRIEND"

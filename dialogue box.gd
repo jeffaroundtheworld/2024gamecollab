@@ -3,9 +3,10 @@ extends Control
 
 
 var dialogue = [
-'yo, im testing out this dialogue yo, this is crazy yo',
-'woah, me too bro, thats crazy bro. What the hell bro',
-'i can\'t do this dawg, HELP ME IM STUUUUUUUUUCK!!!!'
+'hey its me, the player',
+'now its me, your friend!!!!!!!!',
+'i can\'tbelieve its me, the player, the one and only, again!!!!',
+'back to me, the friend!!'
 ]
 
 var dialogue_list = 0
@@ -16,27 +17,32 @@ func _ready():
 	play_dialogue()
 	$playersprites.frame=0
 	$friendsprites.frame=0
-	$youlabel.visible = false
+	$youlabel.visible = true
 	$friendlabel.visible = false
-	$box.hide()
-	$boxflipped.hide()
+	$box.visible = true
+	$boxflipped.visible = false
 	
 
 func _process(delta):
 	if Input.is_action_just_pressed("enter"):
 		play_dialogue()
-		$playersprites.frame+=1
 		$friendsprites.frame+=1
-	if dialogue_list == [1,2]: #fix this
-		$youlabel.visible = true
-		$box.show()
-	elif $box.visibility == true:
-		$box.hide()
-		
-	else:
+		$playersprites.frame+=1
+	if dialogue_list%2==0: 
 		$friendlabel.visible = true
-		$boxflipped.show()
-		
+		$boxflipped.visible = true
+	elif $friendlabel.visible == true:
+		$boxflipped.visible = true
+		$box.visible = false
+		$youlabel.visible = false
+	elif $youlabel.visible == true:
+		$box.visible = true
+		$friendlabel.visible = false
+		$boxflipped.visible = false
+	else:
+		$box.visible = true
+		$youlabel.visible = true
+	
 
 
 func play_dialogue():
