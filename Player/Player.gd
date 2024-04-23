@@ -38,7 +38,7 @@ func _input(event):
 	
 
 func _process(delta):
-	#print(position.x, position.z)
+	print(position.x, position.z)
 	if get_tree().current_scene.name == "Sketchfab_Scene_2": 
 		if position.x<-35.5 and position.x>-35.6:
 			position.x=-38.54
