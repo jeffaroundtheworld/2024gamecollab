@@ -1,9 +1,7 @@
-
 [gd_scene load_steps=4 format=3 uid="uid://cuhwa0ohibysb"]
 
 [ext_resource type="PackedScene" uid="uid://c02gbhxbgtgn2" path="res://key_with_ring_and_tag/scene.gltf" id="1_gcjco"]
-
-[ext_resource type="Script" path="res://key.gd" id="1_vdnrv"]
+[ext_resource type="Script" path="res://Extra stuff/key.gd" id="1_vdnrv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vtuss"]
 

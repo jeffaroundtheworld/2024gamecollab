@@ -1,7 +1,6 @@
-
 [gd_scene load_steps=3 format=3 uid="uid://ic0hola8fw8h"]
 
-[ext_resource type="PackedScene" uid="uid://bvam8a4ucnxev" path="res://scene.gltf" id="1_cybcj"]
+[ext_resource type="PackedScene" uid="uid://bvam8a4ucnxev" path="res://Extra stuff/scene.gltf" id="1_cybcj"]
 
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_37sqb"]

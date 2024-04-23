@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cajo515buuvjs"]
 
-[ext_resource type="Script" path="res://monsterspawner.gd" id="1_d01wy"]
+[ext_resource type="Script" path="res://Extra stuff/monsterspawner.gd" id="1_d01wy"]
 
 [node name="monsterspawner" type="Node3D"]
 script = ExtResource("1_d01wy")
