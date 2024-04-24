@@ -24,6 +24,8 @@ func _ready():
 	$friendlabel.visible = false
 	$box.visible = true
 	$boxflipped.visible = false
+	$choice1.visible = false
+	$choice2.visible = false
 	
 	
 
@@ -47,8 +49,17 @@ func _process(delta):
 func play_dialogue():
 	if dialogue_list < dialogue.size():
 		$text.bbcode_text = dialogue[dialogue_list]
-	else:
-		queue_free()
+	else: #find a way to make it end without queu free
+		$choice1.visible = true 
+		$choice2.visible = true
+		$playersprites.visible = false
+		$friendsprites.visible = false
+		$youlabel.visible = false
+		$friendlabel.visible = false
+		$box.visible = false
+		$boxflipped.visible = false
+		$choice1.visible = false
+		$choice2.visible = false
 	dialogue_list += 1
 
 

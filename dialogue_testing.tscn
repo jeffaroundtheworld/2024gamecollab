@@ -181,3 +181,21 @@ visibility_layer = 4
 position = Vector2(52, 179.188)
 scale = Vector2(0.830599, 0.773874)
 sprite_frames = SubResource("SpriteFrames_n3qiw")
+
+[node name="choice1" type="Button" parent="dialogue box"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 37.0
+offset_right = 421.0
+offset_bottom = 190.0
+text = "Calm down, you are going to get us killed 
+if you keep yelling.
+"
+
+[node name="choice2" type="Button" parent="dialogue box"]
+offset_left = 440.0
+offset_top = 37.0
+offset_right = 905.0
+offset_bottom = 190.0
+text = "Im fine, take a deep breath.
+Are you okay?"
