@@ -3,17 +3,14 @@ extends Control
 
 
 var dialogue = [
-'hey its me, the player',
-'now its me, your friend!!!!!!!!',
-'i can\'tbelieve its me, the player, the one and only, again!!!!',
-'back to me, the friend!!'
+'!!!',
+'...name? IS THAT YOU???',
+'Yes I-',
+'I THOUGHT I WAS ALL ALONE *SOB* I THOUGHT I WAS GONNA DIE',
+'Friend do you-',
+'IM SO GLAD YOU ARE OKAY I-',
 ]
 
-var dialogue2 = [
-	'Im so sorry oh my god oh god we are going to die',
-	'just be quiet, okay?',
-	'okay.',
-]
 
 var dialogue_list = 0
 var finished = false
@@ -27,8 +24,7 @@ func _ready():
 	$friendlabel.visible = false
 	$box.visible = true
 	$boxflipped.visible = false
-	$choice1.visible = false
-	$choice2.visible = false
+	
 	
 
 func _process(delta):
@@ -48,16 +44,11 @@ func _process(delta):
 		$boxflipped.visible = false
 	
 
-	
-
-
 func play_dialogue():
 	if dialogue_list < dialogue.size():
 		$text.bbcode_text = dialogue[dialogue_list]
 	else:
 		queue_free()
-		$choice1.visible = true
-		$choice2.visible = true
 	dialogue_list += 1
 
 
