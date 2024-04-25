@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://r74o7boqj3md"]
 
 [ext_resource type="FontFile" uid="uid://wsph566e2gf" path="res://Menu Screen/fonts/Heartless.ttf" id="1_ifhho"]
-[ext_resource type="Script" path="res://Extra stuff/Button.gd" id="2_r5m4x"]
+[ext_resource type="Script" path="res://Level design/school_accessories/Button.gd" id="2_r5m4x"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

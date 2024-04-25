@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cl6mo4ed5xv62"]
 
-[ext_resource type="Script" path="res://Extra stuff/character_2.gd" id="1_3trxw"]
+[ext_resource type="Script" path="res://Level design/school_accessories/character_2.gd" id="1_3trxw"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_b2ff6"]
 

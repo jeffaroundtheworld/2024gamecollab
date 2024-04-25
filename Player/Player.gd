@@ -20,6 +20,7 @@ var head_y_axis =0.0
 var camera_x_axis =0.0
 var health = 100
 var climb = 0
+var phase = 0
 var CorrectSound = preload("res://Player/concrete-footsteps-6752.mp3")
 
 func _ready():
@@ -41,7 +42,12 @@ func _process(delta):
 	print(position.x, position.z)
 	if get_tree().current_scene.name == "Sketchfab_Scene_2": 
 		if position.x<-35.5 and position.x>-35.6:
-			position.x=-38.54
+			velocity.x = -5
+			$Sketchfab_Scene_2/Player/CollisionShape3D.disable = true
+			phase = 1
+		if position.x<-38.54:
+			phase = 0
+			$Sketchfab_Scene_2/Player/CollisionShape3D.disable = false
 		if position.x>-38.53 and position.x<-38.43:
 			position.x = -35.4
 		
@@ -58,7 +64,7 @@ func _process(delta):
 		position.x = 33.460
 		position.z = -0.02
 		if Input.is_key_pressed(KEY_W):
-			velocity.y = 5
+			velocity.x = -5
 		if Input.is_key_pressed(KEY_S):
 			velocity.y = -5
 			if position.y<1.9:
@@ -68,7 +74,7 @@ func _process(delta):
 		if position.y>14.5:
 			position.z = 1.5
 			climb = 0
-	if climb == 0:
+	if climb == 0 and phase == 0:
 		direction = Input.get_axis("left","right")* head.basis.x + Input.get_axis("forewards", "backwards") * head.basis.z
 		velocity = velocity.lerp(direction * playerSpeed + velocity.y * Vector3.UP, playerAcceleration * delta)
 		if Input.is_action_just_pressed("jump") and is_on_floor():

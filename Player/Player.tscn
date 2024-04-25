@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cixijvg7bdjir"]
+[gd_scene load_steps=8 format=3 uid="uid://cixijvg7bdjir"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_ac7pe"]
 [ext_resource type="Script" path="res://Player/SpotLight3D.gd" id="2_rk60t"]
@@ -6,6 +6,14 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqhxq"]
 radius = 0.3
+
+[sub_resource type="Animation" id="Animation_fgdlm"]
+resource_name = "collision1"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j5rjf"]
+_data = {
+"collision1": SubResource("Animation_fgdlm")
+}
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ap72o"]
 radius = 0.3
@@ -15,6 +23,11 @@ script = ExtResource("1_ac7pe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_eqhxq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CollisionShape3D"]
+libraries = {
+"": SubResource("AnimationLibrary_j5rjf")
+}
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_ap72o")

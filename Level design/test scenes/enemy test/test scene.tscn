@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dbnql13ycusy6"]
 
-[ext_resource type="PackedScene" uid="uid://pks6uvct27hy" path="res://enemy/enemy.tscn" id="1_rxies"]
-[ext_resource type="PackedScene" uid="uid://cixijvg7bdjir" path="res://Player/Player.tscn" id="2_7nki8"]
+[ext_resource type="PackedScene" uid="uid://pks6uvct27hy" path="res://enemy/enemy.tscn" id="1_erntn"]
+[ext_resource type="PackedScene" uid="uid://cixijvg7bdjir" path="res://Player/Player.tscn" id="2_t2nf4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fmf5i"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -94,7 +94,7 @@ skin = SubResource("Skin_obulh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4"]
 shape = SubResource("BoxShape3D_osijd")
 
-[node name="enemy" parent="." instance=ExtResource("1_rxies")]
+[node name="enemy" parent="." instance=ExtResource("1_erntn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37602, 0.106423, 4.10483)
 
-[node name="Player" parent="." instance=ExtResource("2_7nki8")]
+[node name="Player" parent="." instance=ExtResource("2_t2nf4")]
