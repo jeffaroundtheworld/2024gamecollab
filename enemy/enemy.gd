@@ -4,9 +4,12 @@ extends CharacterBody3D
 @export var move_speed = 2
 @export var attack_range = 2
 
-@onready var player = get_parent().get_node("Player")
+var player
 var dead = false 
 
+
+func _ready():
+	var player = get_node("/root/Node3D/Player")
 func _physics_process(delta):
 	if dead : 
 		return
