@@ -6,7 +6,7 @@
 script/source = "extends CharacterBody3D
 
 @onready var animated_sprite_3d = $AnimatedSprite3D
-@export var move_speed = 6
+@export var move_speed = 5
 
 
 @onready var player = get_parent().get_parent().get_node(\"Player\")

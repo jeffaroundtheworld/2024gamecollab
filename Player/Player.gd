@@ -39,18 +39,25 @@ func _input(event):
 	
 
 func _process(delta):
-	print(position.x, position.z)
-	if get_tree().current_scene.name == "Sketchfab_Scene_2": 
+	print(position.y)
+	if get_tree().current_scene.name == "Sketchfab_Scene_2" and position.y<-20: 
 		if position.x<-35.5 and position.x>-35.6:
 			velocity.x = -5
-			$Sketchfab_Scene_2/Player/CollisionShape3D.disable = true
+			velocity.z = 0
+			$CollisionShape3D.set_deferred("disabled", true)
 			phase = 1
 		if position.x<-38.54:
 			phase = 0
-			$Sketchfab_Scene_2/Player/CollisionShape3D.disable = false
+			$CollisionShape3D.set_deferred("disabled", false)
 		if position.x>-38.53 and position.x<-38.43:
-			position.x = -35.4
-		
+			phase = 1
+			velocity.x = 5
+			velocity.z = 0
+			$CollisionShape3D.set_deferred("disabled", true)
+		if position.x>-35.0:
+			phase = 0
+			$CollisionShape3D.set_deferred("disabled", false)
+			
 	if abs(velocity.x)>0.5 or abs(velocity.z)>0.5:
 		if !$AudioStreamPlayer3D.is_playing():
 			$AudioStreamPlayer3D.stream = CorrectSound
