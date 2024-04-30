@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ctmkhygxtu8hw"]
+[gd_scene load_steps=19 format=3 uid="uid://ctmkhygxtu8hw"]
 
 [ext_resource type="Texture2D" uid="uid://dnl1hh3ric3la" path="res://SPRITES/friend1.PNG" id="1_8dg60"]
 [ext_resource type="Script" path="res://dialogue box.gd" id="1_8ocke"]
@@ -75,6 +75,8 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Theme" id="Theme_e0edd"]
 
 [node name="dialogue testing" type="Control"]
 layout_mode = 3
@@ -188,14 +190,18 @@ offset_left = 3.0
 offset_top = 37.0
 offset_right = 421.0
 offset_bottom = 190.0
+theme = SubResource("Theme_e0edd")
+theme_override_colors/font_hover_color = Color(0.360784, 0.360784, 0.360784, 1)
 text = "Calm down, you are going to get us killed 
 if you keep yelling.
 "
 
 [node name="choice2" type="Button" parent="dialogue box"]
+layout_mode = 0
 offset_left = 440.0
 offset_top = 37.0
 offset_right = 905.0
 offset_bottom = 190.0
+theme_override_colors/font_hover_color = Color(0.360784, 0.360784, 0.360784, 1)
 text = "Im fine, take a deep breath.
 Are you okay?"

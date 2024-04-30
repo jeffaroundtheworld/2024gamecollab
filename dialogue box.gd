@@ -9,7 +9,9 @@ var dialogue = [
 'I THOUGHT I WAS ALL ALONE *SOB* I THOUGHT I WAS GONNA DIE',
 'Friend do you-',
 'IM SO GLAD YOU ARE OKAY I-',
+'what the sigma.'
 ]
+
 
 
 var dialogue_list = 0
@@ -39,29 +41,28 @@ func _process(delta):
 		$boxflipped.visible = true
 		$box.visible = false
 		$youlabel.visible = false
-	else:
+	elif dialogue_list%2!=0:
 		$box.visible = true
 		$youlabel.visible = true
 		$friendlabel.visible = false
 		$boxflipped.visible = false
-	
+	elif dialogue_list > dialogue.size():
+		options()
+		
 
+		
 func play_dialogue():
 	if dialogue_list < dialogue.size():
 		$text.bbcode_text = dialogue[dialogue_list]
-	else: #find a way to make it end without queu free
-		$choice1.visible = true 
-		$choice2.visible = true
-		$playersprites.visible = false
-		$friendsprites.visible = false
-		$youlabel.visible = false
-		$friendlabel.visible = false
-		$box.visible = false
-		$boxflipped.visible = false
-		$choice1.visible = false
-		$choice2.visible = false
 	dialogue_list += 1
 
+func options():
+	$choice1.visible = true 
+	$choice2.visible = true
+	$friendlabel.visible = false
+	$boxflipped.visible = false
+	$box.visible = false
+	$youlabel.visible = false
 
 
 
