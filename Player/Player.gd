@@ -39,11 +39,9 @@ func _input(event):
 	
 
 func _process(delta):
-	print(position.y)
+	print(position.z)
 	if get_tree().current_scene.name == "Sketchfab_Scene_2" and position.y<-20: 
 		if position.x<-35.5 and position.x>-35.6:
-			velocity.x = -5
-			velocity.z = 0
 			$CollisionShape3D.set_deferred("disabled", true)
 			phase = 1
 		if position.x<-38.54:
@@ -51,8 +49,6 @@ func _process(delta):
 			$CollisionShape3D.set_deferred("disabled", false)
 		if position.x>-38.53 and position.x<-38.43:
 			phase = 1
-			velocity.x = 5
-			velocity.z = 0
 			$CollisionShape3D.set_deferred("disabled", true)
 		if position.x>-35.0:
 			phase = 0
@@ -81,13 +77,18 @@ func _process(delta):
 		if position.y>14.5:
 			position.z = 1.5
 			climb = 0
-	if climb == 0 and phase == 0:
+	
+	if climb == 0:
 		direction = Input.get_axis("left","right")* head.basis.x + Input.get_axis("forewards", "backwards") * head.basis.z
 		velocity = velocity.lerp(direction * playerSpeed + velocity.y * Vector3.UP, playerAcceleration * delta)
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y += jumpForce
 		else:
 			velocity.y -= gravity * delta
+	if phase == 1:
+		position.z = -42.4
+		velocity.z = 0
+		velocity.y = 0
 	
 	
 	head.rotation.y = lerp(head.rotation.y, -deg_to_rad(head_y_axis), cameraAcceleration *delta )
