@@ -165,9 +165,24 @@ theme_override_constants/text_highlight_h_padding = 0
 theme_override_fonts/normal_font = SubResource("FontVariation_c33s5")
 theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
-text = "Hello im a placeholder :3
-I love placeholding, its always been my dream to be a placeholder. Yipee!!
-Heheheheh teehee im a silly line of text"
+text = "!!!"
+
+[node name="text2" type="RichTextLabel" parent="dialogue box"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 0.318
+anchor_right = 0.966
+anchor_bottom = 0.943
+offset_right = 1.0
+theme_override_colors/default_color = Color(0.760784, 0.713726, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/text_highlight_h_padding = 0
+theme_override_fonts/normal_font = SubResource("FontVariation_c33s5")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "placeholder"
 
 [node name="friendsprites" type="AnimatedSprite2D" parent="dialogue box"]
 show_behind_parent = true
@@ -205,3 +220,5 @@ offset_bottom = 190.0
 theme_override_colors/font_hover_color = Color(0.360784, 0.360784, 0.360784, 1)
 text = "Im fine, take a deep breath.
 Are you okay?"
+
+[connection signal="pressed" from="dialogue box/choice1" to="dialogue box" method="_on_choice_1_pressed"]
