@@ -34,7 +34,8 @@ func _input(event):
 		camera_x_axis = clamp(camera_x_axis, -90.0 , 90.0)
 	
 	if Input.is_key_pressed(KEY_ESCAPE):
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://Menu Screen/title_screen.tscn")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	
 
