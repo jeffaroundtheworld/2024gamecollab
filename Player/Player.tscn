@@ -42,7 +42,7 @@ mesh = SubResource("CapsuleMesh_ap72o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0351681, 0, -0.196824)
 light_volumetric_fog_energy = 0.0
 shadow_enabled = true
-spot_range = 30.0
+spot_range = 20.0
 script = ExtResource("2_rk60t")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hand/SpotLight3D"]
