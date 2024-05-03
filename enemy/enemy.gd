@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @onready var animated_sprite_3d = $AnimatedSprite3D
-@export var move_speed = 2
+@export var move_speed = 1.5
 @export var attack_range = 2
 
 var player
