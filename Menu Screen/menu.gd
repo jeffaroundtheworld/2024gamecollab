@@ -3,7 +3,7 @@ extends Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 func _pressed():
 	get_tree().change_scene_to_file("res://Menu Screen/title_screen.tscn")
 
