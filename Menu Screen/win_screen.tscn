@@ -35,6 +35,7 @@ offset_top = 305.0
 offset_right = 342.048
 offset_bottom = 462.0
 rotation = 0.122173
+theme_override_colors/font_hover_color = Color(0.352941, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_7c61q")
 theme_override_font_sizes/font_size = 90
 text = "Menu"

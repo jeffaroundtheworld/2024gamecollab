@@ -51,6 +51,7 @@ theme_override_fonts/font = ExtResource("2_iuq38")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ke4p3")
 text = "play"
+flat = true
 
 [node name="options" type="Button" parent="."]
 layout_mode = 2
@@ -63,6 +64,7 @@ theme_override_fonts/font = ExtResource("2_iuq38")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxEmpty_aidvd")
 text = "options"
+flat = true
 
 [node name="quit" type="Button" parent="."]
 material = SubResource("CanvasItemMaterial_kv4jg")
@@ -77,6 +79,7 @@ theme_override_fonts/font = ExtResource("2_iuq38")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxEmpty_kxdt6")
 text = "quit game"
+flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_3oy4p")
