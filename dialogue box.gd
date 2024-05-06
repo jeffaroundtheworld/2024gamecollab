@@ -11,7 +11,10 @@ var dialogue = [
 
 ]
 
-var dialogue1 = ['*SNIFF*...Sorry. Im sorry']
+var dialogue1 = ['*SNIFF*...Sorry. Im sorry', 
+'About that thing...you saw it?',
+'that thing..those things.. i didnt just see them. They...I think know them'
+]
 
 var dialogue2 = ['Sorry, Im just..im okay. Im glad you are here']
 
@@ -30,7 +33,7 @@ func _ready():
 	$boxflipped.visible = false
 	$choice1.visible = false
 	$choice2.visible = false
-	$text2.visible = false
+
 	
 func play_dialogue():
 	if dialogue_list < dialogue.size():
@@ -92,9 +95,14 @@ func options():
 
 func _on_choice_1_pressed():
 	dialogue += dialogue1
-	dialogue_list += 1
 	$friendsprites.frame+=1
 	$playersprites.frame+=1
+	$choice1.visible = false 
+	$choice2.visible = false
+	$text.visible = true
+	pla_dialogue()
+	
+
 
 func _on_choice_2_pressed():
 	dialogue += dialogue2
