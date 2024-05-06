@@ -100,7 +100,7 @@ func _on_choice_1_pressed():
 	$choice1.visible = false 
 	$choice2.visible = false
 	$text.visible = true
-	pla_dialogue()
+	plau_dialogue()
 	
 
 
