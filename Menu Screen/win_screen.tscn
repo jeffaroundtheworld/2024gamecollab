@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxwljrq7n1nv6"]
+[gd_scene load_steps=4 format=3 uid="uid://dpodioli4r8rv"]
 
-[ext_resource type="FontFile" uid="uid://du6vxte0j3p3u" path="res://Menu Screen/fonts/Heartless.ttf" id="1_7c61q"]
+[ext_resource type="FontFile" uid="uid://cstatuo16ger3" path="res://Menu Screen/fonts/Heartless.ttf" id="1_7c61q"]
 [ext_resource type="VideoStream" path="res://Menu Screen/menu video/20240501100004.ogv" id="2_wtb00"]
 [ext_resource type="Script" path="res://Menu Screen/menu.gd" id="3_wf725"]
 
