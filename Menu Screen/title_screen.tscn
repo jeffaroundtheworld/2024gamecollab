@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Menu Screen/Main_Menu.gd" id="1_q615w"]
 [ext_resource type="AudioStream" uid="uid://d1iya05umqad8" path="res://sound effects/10 Minutes of CreepyScary Horror Background Sounds and Music.mp3" id="2_3oy4p"]
-[ext_resource type="FontFile" uid="uid://du6vxte0j3p3u" path="res://Menu Screen/fonts/Heartless.ttf" id="2_iuq38"]
+[ext_resource type="FontFile" uid="uid://y17hwur7r1hw" path="res://Menu Screen/fonts/Heartless.ttf" id="2_iuq38"]
 [ext_resource type="VideoStream" path="res://Menu Screen/menu video/menu-screen.ogv" id="4_v7f7i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ke4p3"]
@@ -30,10 +30,8 @@ color = Color(0.192157, 0.192157, 0.192157, 1)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 4.0
-offset_right = 1927.0
-offset_bottom = 1092.0
+offset_right = 1920.0
+offset_bottom = 1088.0
 scale = Vector2(0.6, 0.6)
 stream = ExtResource("4_v7f7i")
 autoplay = true
