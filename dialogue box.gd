@@ -3,11 +3,11 @@ extends Control
 
 
 var dialogue = [
-'..Friend?',
-'...name? IS THAT YOU???',
+'..Rory?',
+'...Sasha? IS THAT YOU???',
 'Yes I-',
 'I THOUGHT I WAS ALL ALONE *SOB* I THOUGHT I WAS GONNA DIE',
-'Friend do you-',
+'Rory do you-',
 'IM SO GLAD YOU ARE OKAY I-'
 ]
 
@@ -35,21 +35,22 @@ var dialogue2 = [
 	'*Sigh*...Im not really sure..The last few hours have been such a blur....but there used to be other students running around here...until they..',
 	'Did something happen to them?',
 	'...Im not sure honestly. But students were screaming, and it didnt sound quite...human.. ',
-	'Not quite human...Like that "thing" I saw...',
-	'During the whole comotion, I got scared and was running from..something. It was dark and I didnt know where to go. The gate was open when I entered, but as soon as I shut it it clicked into place..',
-	'You\'re locked in? *rattle rattle* do you see a key?"',
+	'Not quite human...Like that "thing" I saw...What happened?',
+	'There was this big comotion.. I got scared and was running from..something. It was dark and I didnt know where to go. The gate was open when I entered, but as soon as it shut it clicked into place..',
+	'You\'re locked in? *rattle rattle* do you see a key?',
 	'Ive looked all over. If there was one I would have found it. Besides, this door seems to require a keycard... Could you find it?'
 	]
 	
 var dialogue3 = [
 	'space',
+	'space',
 	'You want me to just wait here? I..I guess so. Though if you do find the keycard...Well..Take care.',
-	'goodbye'
+	'Goodbye'
 ]
 var dialogue4 = [
 	'space',
-	'Name....Please stay safe. Ill do my best to stay calm here. Thank you.',
-	'Of course, friend. Goodbye, Ill see you soon.'
+	'Sasha....Please stay safe. Ill do my best to stay calm here. Thank you.',
+	'Of course. Goodbye, Ill see you soon.'
 ]
 var dialogue_list = 0
 var finished = false
@@ -66,6 +67,7 @@ func _ready():
 	$choice2.visible = false
 	$choice3.visible = false
 	$choice4.visible = false
+		
 
 	
 func play_dialogue():
@@ -84,6 +86,7 @@ func play_dialogue():
 		$youlabel.visible = true
 		$friendlabel.visible = false
 		$boxflipped.visible = false
+
 
 func _process(delta):
 	if Input.is_action_just_pressed("enter"):

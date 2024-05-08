@@ -1,20 +1,21 @@
-[gd_scene load_steps=21 format=3 uid="uid://bbi8o8skkgd3y"]
+[gd_scene load_steps=22 format=3 uid="uid://bbi8o8skkgd3y"]
 
-[ext_resource type="Texture2D" uid="uid://bsmrnqftsg0g2" path="res://SPRITES/friend1.PNG" id="1_8dg60"]
+[ext_resource type="Texture2D" uid="uid://dnl1hh3ric3la" path="res://SPRITES/friend1.PNG" id="1_8dg60"]
 [ext_resource type="Script" path="res://dialogue box.gd" id="1_8ocke"]
-[ext_resource type="Texture2D" uid="uid://b1bagkpby3ie7" path="res://SPRITES/PngItem_2721759.png" id="2_03n83"]
-[ext_resource type="Texture2D" uid="uid://4md05x21by0l" path="res://SPRITES/friend2.PNG" id="2_vsifw"]
-[ext_resource type="Texture2D" uid="uid://c0qkgh5dfq3w5" path="res://SPRITES/friend3.PNG" id="3_cql51"]
-[ext_resource type="FontFile" uid="uid://yw1xs8aiqpw0" path="res://fonts/SplendidB.ttf" id="3_dxcuw"]
-[ext_resource type="Texture2D" uid="uid://drv8uucl2mbm1" path="res://SPRITES/player1.PNG" id="4_vy81d"]
-[ext_resource type="Texture2D" uid="uid://soiy2biyw3pn" path="res://SPRITES/player2.PNG" id="5_5q72a"]
-[ext_resource type="Texture2D" uid="uid://dqqi2misjo0ht" path="res://SPRITES/friend4.PNG" id="5_y1020"]
-[ext_resource type="Texture2D" uid="uid://vpid3j3shvt0" path="res://SPRITES/player3.PNG" id="6_yg8t3"]
-[ext_resource type="Texture2D" uid="uid://d0r36qitl4yk7" path="res://SPRITES/player4.PNG" id="7_6235j"]
-[ext_resource type="Texture2D" uid="uid://dadg6sw316meo" path="res://SPRITES/friend6.PNG" id="9_t2v74"]
-[ext_resource type="Texture2D" uid="uid://imk374jhkft5" path="res://SPRITES/player6.PNG" id="9_ysl75"]
-[ext_resource type="Texture2D" uid="uid://b1meikfmuerkq" path="res://SPRITES/friend5.PNG" id="10_db07j"]
-[ext_resource type="FontFile" uid="uid://c6vaxn5cme3cj" path="res://fonts/SplendidN.ttf" id="16_8loir"]
+[ext_resource type="Texture2D" uid="uid://cpvdcnjcd72kf" path="res://SPRITES/PngItem_2721759.png" id="2_03n83"]
+[ext_resource type="Texture2D" uid="uid://bn2ja8gpbwkov" path="res://SPRITES/friend2.PNG" id="2_vsifw"]
+[ext_resource type="Texture2D" uid="uid://olmwtxbgnnqn" path="res://SPRITES/friend3.PNG" id="3_cql51"]
+[ext_resource type="FontFile" uid="uid://deiongrrc18es" path="res://fonts/SplendidB.ttf" id="3_dxcuw"]
+[ext_resource type="Texture2D" uid="uid://dfgppqmoq5buu" path="res://SPRITES/player1.PNG" id="4_vy81d"]
+[ext_resource type="Texture2D" uid="uid://1fewf0t8uhtu" path="res://SPRITES/player2.PNG" id="5_5q72a"]
+[ext_resource type="Texture2D" uid="uid://cmebs5vljb6qp" path="res://SPRITES/friend4.PNG" id="5_y1020"]
+[ext_resource type="Texture2D" uid="uid://cikqvxk27nj4r" path="res://SPRITES/player3.PNG" id="6_yg8t3"]
+[ext_resource type="Texture2D" uid="uid://cm7xno4k1t876" path="res://SPRITES/player4.PNG" id="7_6235j"]
+[ext_resource type="Texture2D" uid="uid://clacstn0wqoyd" path="res://SPRITES/friend6.PNG" id="9_t2v74"]
+[ext_resource type="Texture2D" uid="uid://djbnnq7p5db5a" path="res://SPRITES/player6.PNG" id="9_ysl75"]
+[ext_resource type="Texture2D" uid="uid://h6vqul05c0bt" path="res://SPRITES/friend5.PNG" id="10_db07j"]
+[ext_resource type="Texture2D" uid="uid://bjj0e3m4l1ipp" path="res://SPRITES/player5.PNG" id="16_7g6vo"]
+[ext_resource type="FontFile" uid="uid://b78n17gtfspr6" path="res://fonts/SplendidN.ttf" id="16_8loir"]
 
 [sub_resource type="Theme" id="Theme_behuv"]
 default_font = ExtResource("16_8loir")
@@ -127,7 +128,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_yg8t3")
 }, {
-"duration": 1.1,
+"duration": 1.0,
 "texture": ExtResource("4_vy81d")
 }, {
 "duration": 1.0,
@@ -141,6 +142,30 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_5q72a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vy81d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yg8t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vy81d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ysl75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vy81d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5q72a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vy81d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7g6vo")
 }],
 "loop": false,
 "name": &"default",
@@ -229,7 +254,7 @@ anchor_top = 0.318
 anchor_right = 0.966
 anchor_bottom = 0.943
 offset_right = 1.0
-theme_override_colors/default_color = Color(0.760784, 0.713726, 0.662745, 1)
+theme_override_colors/default_color = Color(0.698039, 0.647059, 0.639216, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_constants/text_highlight_h_padding = 0
@@ -252,7 +277,7 @@ visibility_layer = 4
 position = Vector2(52, 179.188)
 scale = Vector2(0.830599, 0.773874)
 sprite_frames = SubResource("SpriteFrames_n3qiw")
-frame = 6
+frame = 14
 
 [node name="choice1" type="Button" parent="dialogue box"]
 layout_mode = 0
@@ -261,9 +286,10 @@ offset_top = 37.0
 offset_right = 421.0
 offset_bottom = 190.0
 theme = SubResource("Theme_e0edd")
+theme_override_colors/font_color = Color(0.698039, 0.647059, 0.639216, 1)
 theme_override_colors/font_hover_color = Color(0.360784, 0.360784, 0.360784, 1)
-text = "Calm down, you are going to get us killed 
-if you keep yelling.
+text = "Rory calm down, you are going to get us 
+killed if you keep yelling.
 "
 
 [node name="choice2" type="Button" parent="dialogue box"]
@@ -272,26 +298,31 @@ offset_left = 440.0
 offset_top = 37.0
 offset_right = 905.0
 offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.698039, 0.647059, 0.639216, 1)
 theme_override_colors/font_hover_color = Color(0.360784, 0.360784, 0.360784, 1)
 text = "Im fine, take a deep breath.
 Are you okay?"
 
 [node name="choice3" type="Button" parent="dialogue box"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 37.0
 offset_right = 421.0
 offset_bottom = 190.0
 theme = SubResource("Theme_e0edd")
+theme_override_colors/font_color = Color(0.698039, 0.647059, 0.639216, 1)
 theme_override_colors/font_hover_color = Color(0.360784, 0.360784, 0.360784, 1)
-text = "You're safer in there than I amout here. 
+text = "You're safer in there than I am out here. 
 I'll send help when I escape.
 "
 
 [node name="choice4" type="Button" parent="dialogue box"]
+layout_mode = 0
 offset_left = 440.0
 offset_top = 37.0
 offset_right = 905.0
 offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.698039, 0.647059, 0.639216, 1)
 theme_override_colors/font_hover_color = Color(0.360784, 0.360784, 0.360784, 1)
 text = "Dont worry. I'll search every room
 in this place till I find it.
