@@ -93,4 +93,4 @@ frame_progress = 0.221851
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_s0cei")
 autoplay = true
-max_distance = 20.0
+max_distance = 30.0
