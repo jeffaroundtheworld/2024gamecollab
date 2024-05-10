@@ -1,6 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://r74o7boqj3md"]
 
-[ext_resource type="FontFile" uid="uid://y17hwur7r1hw" path="res://Menu Screen/fonts/Heartless.ttf" id="1_ifhho"]
+<<<<<<< Updated upstream
+[ext_resource type="FontFile" uid="uid://ckf7yhsdjve3p" path="res://Menu Screen/fonts/Heartless.ttf" id="1_ifhho"]
+=======
+[ext_resource type="FontFile" uid="uid://byrkxy0dyd5js" path="res://Menu Screen/fonts/Heartless.ttf" id="1_ifhho"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" path="res://Level design/school_accessories/Button.gd" id="2_r5m4x"]
 
 [node name="Control" type="Control"]

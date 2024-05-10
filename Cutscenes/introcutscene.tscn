@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://3c8fv0yhglif"]
+
+[ext_resource type="Script" path="res://Cutscenes/introcutscene.gd" id="1_36epw"]
+[ext_resource type="VideoStream" path="res://Cutscenes/Intro_cutscene.ogv" id="2_5hlfe"]
+[ext_resource type="FontFile" uid="uid://ckf7yhsdjve3p" path="res://Menu Screen/fonts/Heartless.ttf" id="3_44i00"]
+
+[node name="Introcutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_36epw")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_5hlfe")
+autoplay = true
+expand = true
+
+[node name="Skip" type="Button" parent="."]
+layout_mode = 0
+offset_left = 994.0
+offset_top = 546.0
+offset_right = 1117.0
+offset_bottom = 616.0
+theme_override_fonts/font = ExtResource("3_44i00")
+theme_override_font_sizes/font_size = 25
+text = "Skip cutscene"
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="Skip" to="." method="_on_skip_pressed"]
