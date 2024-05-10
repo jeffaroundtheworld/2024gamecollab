@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://mrle1wv4k17n"]
 
-[ext_resource type="Script" path="res://Menu Screen/Main_Menu.gd" id="1_5sjw5"]
+[ext_resource type="Script" path="res://Menu Screen/options_screen.gd" id="1_4xjp1"]
 
 [node name="OptionsScreen" type="Control"]
 layout_mode = 3
@@ -13,7 +13,7 @@ offset_right = -3.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_5sjw5")
+script = ExtResource("1_4xjp1")
 
 [node name="BackToMenu" type="Button" parent="."]
 layout_mode = 0
