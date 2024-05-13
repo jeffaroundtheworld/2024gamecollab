@@ -17,12 +17,12 @@ billboard_keep_scale = true
 script = ExtResource("1_i35ar")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.69205, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(0.760595, 0, 0, 0, 1.83488, 0, 0, 0, 1.27995, 0, 0, 0)
 mesh = SubResource("QuadMesh_iwnm5")
 surface_material_override/0 = SubResource("StandardMaterial3D_b6to5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2.88933, 0, 0, 0, 1.68497, 0, 0, 0, 3.12419, 0, 0, 0)
+transform = Transform3D(1.59308, 0, 0, 0, 1.68497, 0, 0, 0, 2.20774, 0, 0, 0)
 shape = SubResource("CylinderShape3D_htoia")
 
 [connection signal="tree_entered" from="CollisionShape3D" to="." method="_on_collision_shape_3d_tree_entered"]
