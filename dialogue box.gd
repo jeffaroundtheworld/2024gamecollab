@@ -49,10 +49,11 @@ var dialogue3 = [
 var dialogue4 = [
 	'space',
 	'Sasha....Please stay safe. Ill do my best to stay calm here. Thank you.',
-	'Of course. Goodbye, Ill see you soon. TEST TEST TEST'
+	'Of course. Goodbye, Ill see you soon.'
 ]
 var dialogue_list = 0
 var finished = false
+var dialogueend = 22
 
 
 func _ready():
@@ -66,7 +67,6 @@ func _ready():
 	$choice2.visible = false
 	$choice3.visible = false
 	$choice4.visible = false
-		
 
 	
 func play_dialogue():
@@ -85,6 +85,11 @@ func play_dialogue():
 		$youlabel.visible = true
 		$friendlabel.visible = false
 		$boxflipped.visible = false
+	#if dialogue_list == dialogueend:
+		#queue_free find a way to make it end
+	#elif dialogue_list > dialogueend:
+		#dialogue_list += 3
+
 
 
 func _process(delta):
@@ -141,9 +146,10 @@ func _on_choice_3_pressed():
 
 func _on_choice_4_pressed():
 	dialogue += dialogue4
-	$friendsprites.frame+=2
-	$playersprites.frame+=2
+	print ("dialogue_list")
 	$choice3.visible = false 
 	$choice4.visible = false
 	$text.visible = true
 	play_dialogue()
+	
+	

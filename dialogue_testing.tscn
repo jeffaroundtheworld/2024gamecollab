@@ -234,6 +234,7 @@ metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="dialogue box"]
 show_behind_parent = true
+layout_mode = 0
 offset_left = -478.0
 offset_top = -417.0
 offset_right = 1649.0
@@ -314,7 +315,7 @@ visibility_layer = 4
 position = Vector2(860, 207.25)
 scale = Vector2(0.826255, 0.798541)
 sprite_frames = SubResource("SpriteFrames_rmnih")
-frame = 14
+frame = 28
 
 [node name="playersprites" type="AnimatedSprite2D" parent="dialogue box"]
 show_behind_parent = true
@@ -322,7 +323,7 @@ visibility_layer = 4
 position = Vector2(52, 179.188)
 scale = Vector2(0.830599, 0.773874)
 sprite_frames = SubResource("SpriteFrames_n3qiw")
-frame = 22
+frame = 19
 
 [node name="choice1" type="Button" parent="dialogue box"]
 layout_mode = 0
