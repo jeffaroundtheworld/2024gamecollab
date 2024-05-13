@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://behpeuj6434ro"]
+
+[ext_resource type="Script" path="res://friend.gd" id="1_i35ar"]
+[ext_resource type="Texture2D" uid="uid://dnl1hh3ric3la" path="res://SPRITES/friend1.PNG" id="2_1f8m3"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_iwnm5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6to5"]
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("2_1f8m3")
+
+[node name="friend" type="CharacterBody3D"]
+script = ExtResource("1_i35ar")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.69205, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("QuadMesh_iwnm5")
+surface_material_override/0 = SubResource("StandardMaterial3D_b6to5")
