@@ -1,4 +1,4 @@
-extends CharacterBody3D
+extends Area3D
 
 var cutscene = preload("res://dialogue_testing.tscn")
 
@@ -6,8 +6,10 @@ var cutscene = preload("res://dialogue_testing.tscn")
 
 func _ready():
 	cutscene.instantiate()
-#func _on_body_entered(body):
-	#if body.name == "player":
-		#instanciate the scene fo te dialogue
 
 
+
+
+func _on_body_entered(body):
+	if body.name == "player":
+		print ("bruh")
