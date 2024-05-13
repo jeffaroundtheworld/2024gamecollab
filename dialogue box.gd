@@ -43,14 +43,13 @@ var dialogue2 = [
 	
 var dialogue3 = [
 	'space',
-	'space',
 	'You want me to just wait here? I..I guess so. Though if you do find the keycard...Well..Take care.',
 	'Goodbye'
 ]
 var dialogue4 = [
 	'space',
 	'Sasha....Please stay safe. Ill do my best to stay calm here. Thank you.',
-	'Of course. Goodbye, Ill see you soon.'
+	'Of course. Goodbye, Ill see you soon. TEST TEST TEST'
 ]
 var dialogue_list = 0
 var finished = false
