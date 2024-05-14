@@ -1,13 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dub05mq7an7wx"]
+[gd_scene load_steps=8 format=3 uid="uid://dub05mq7an7wx"]
 
 [ext_resource type="Script" path="res://Menu Screen/Main_Menu.gd" id="1_q615w"]
 [ext_resource type="AudioStream" uid="uid://d1iya05umqad8" path="res://sound effects/10 Minutes of CreepyScary Horror Background Sounds and Music.mp3" id="2_3oy4p"]
-[ext_resource type="FontFile" uid="uid://y17hwur7r1hw" path="res://Menu Screen/fonts/Heartless.ttf" id="2_iuq38"]
+[ext_resource type="FontFile" uid="uid://cg28j4nv6x0wj" path="res://Menu Screen/fonts/Heartless.ttf" id="2_iuq38"]
 [ext_resource type="VideoStream" path="res://Menu Screen/menu video/menu-screen.ogv" id="4_v7f7i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ke4p3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aidvd"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kv4jg"]
 
@@ -51,26 +49,13 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_ke4p3")
 text = "play"
 flat = true
 
-[node name="options" type="Button" parent="."]
-layout_mode = 2
-offset_top = 133.0
-offset_right = 316.0
-offset_bottom = 256.0
-rotation = 0.122173
-theme_override_colors/font_color = Color(0.352574, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_iuq38")
-theme_override_font_sizes/font_size = 80
-theme_override_styles/normal = SubResource("StyleBoxEmpty_aidvd")
-text = "options"
-flat = true
-
 [node name="quit" type="Button" parent="."]
 material = SubResource("CanvasItemMaterial_kv4jg")
 layout_mode = 2
-offset_left = -4.0
-offset_top = 279.0
-offset_right = 311.0
-offset_bottom = 402.0
+offset_left = 5.0
+offset_top = 133.0
+offset_right = 320.0
+offset_bottom = 256.0
 rotation = 0.122173
 theme_override_colors/font_color = Color(0.352574, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_iuq38")
@@ -83,5 +68,4 @@ flat = true
 stream = ExtResource("2_3oy4p")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
