@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4u3fevxoedqb"]
+
+[ext_resource type="Script" path="res://friend.gd" id="1_i35ar"]
+[ext_resource type="Texture2D" uid="uid://c2c5840hdjsx5" path="res://dialogue scene/friend1.PNG" id="2_1f8m3"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_iwnm5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6to5"]
+transparency = 1
+albedo_texture = ExtResource("2_1f8m3")
+billboard_mode = 2
+billboard_keep_scale = true
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_htoia"]
+
+[node name="friend" type="Area3D"]
+script = ExtResource("1_i35ar")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.760595, 0, 0, 0, 1.83488, 0, 0, 0, 1.27995, 0, 0, 0)
+mesh = SubResource("QuadMesh_iwnm5")
+surface_material_override/0 = SubResource("StandardMaterial3D_b6to5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.59308, 0, 0, 0, 1.68497, 0, 0, 0, 2.20774, 0, 0, 0)
+shape = SubResource("CylinderShape3D_htoia")
