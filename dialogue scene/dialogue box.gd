@@ -72,6 +72,7 @@ func _ready():
 	$choice3.visible = false
 	$choice4.visible = false
 	$buttonclick.play()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 
 	
@@ -97,11 +98,21 @@ func play_dialogue():
 
 func _process(delta):
 	if Input.is_action_just_pressed("enter"):
-		play_dialogue()
+		if $choice1.visible == true:
+			pass
+		elif $choice2.visible == true:
+			pass
+		elif $choice3.visible == true:
+			pass
+		elif $choice4.visible == true:
+			pass
+		else:
+			play_dialogue()
 	if dialogue_list > dialogue.size():
 		options()
 	if dialogue_list > dialogueend:
 		queue_free()
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
 
 
