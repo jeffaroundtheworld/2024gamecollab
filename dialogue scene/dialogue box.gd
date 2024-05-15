@@ -4,9 +4,9 @@ extends Control
 
 var dialogue = [
 '..Rory?',
-'...Sasha? IS THAT YOU???',
+'...Sasha? *COUGH COUGH* IS THAT YOU???',
 'Yes I-',
-'I THOUGHT I WAS ALL ALONE *SOB* I THOUGHT I WAS GONNA DIE',
+'I THOUGHT I WAS *COUGH* ALL ALONE *SOB* I THOUGHT I WAS GONNA DIE',
 'Rory do you-',
 'IM SO GLAD YOU ARE OKAY I-'
 ]
@@ -20,7 +20,7 @@ var dialogue1 = [
 '*Sigh*...Im not really sure..The last few hours have been such a blur....but there used to be other students running around here...until they..',
 '....Other students..Those things did look somewhat.. "Human"..',
 'Ugh..Id really rather not think about that right now..Whatver they are they are NOT friendly..',
-'Right. lets get you out of there *rattle rattle* huh? *rattle rattle*',
+'Right. Lets go while the coast is clear *rattle rattle* huh? *rattle rattle*',
 'Its locked. Trust me *sniff* I tried.',
 'How did you even get in there?',
 'Well during this whole comotion, I got scared and was running from..something. It was dark and I didnt know where to go. The gate was open when I entered, but as soon as I shut it it clicked into place..',
@@ -35,8 +35,12 @@ var dialogue2 = [
 	'*Sigh*...Im not really sure..The last few hours have been such a blur....but there used to be other students running around here...until they..',
 	'Did something happen to them?',
 	'...Im not sure honestly. But students were screaming, and it didnt sound quite...human.. ',
-	'Not quite human...Like that "thing" I saw...What happened?',
-	'There was this big comotion.. I got scared and was running from..something. It was dark and I didnt know where to go. The gate was open when I entered, but as soon as it shut it clicked into place..',
+	'Not quite human...Like that "thing" I saw...',
+	'You saw them too??? How did you...How are you...',
+	'They arent as smart as us Rory, atleast, not anymore..',
+	'Do you think..we\' ll turn..turn into one of those?',
+	'Not a chance. We have eachother. Speaking of which, we should get going *rattle rattle* huh?',
+	'Thats the thing, im stuck. There was this big comotion.. I got scared and was running from..something. It was dark and I didnt know where to go. The gate was open when I entered, but as soon as it shut it clicked into place..',
 	'You\'re locked in? *rattle rattle* do you see a key?',
 	'Ive looked all over. If there was one I would have found it. Besides, this door seems to require a keycard... Could you find it?'
 	]
@@ -48,12 +52,12 @@ var dialogue3 = [
 ]
 var dialogue4 = [
 	'space',
-	'Sasha....Please stay safe. Ill do my best to stay calm here. Thank you.',
-	'Of course. Goodbye, Ill see you soon.'
+	'Sasha....Please stay safe. Ill do my best to stay calm here...Thank you.',
+	'Youre my best friend. Id do anything for you. Ill be back soon.'
 ]
 var dialogue_list = 0
 var finished = false
-var dialogueend = 22
+var dialogueend = 23
 
 
 func _ready():
@@ -67,6 +71,8 @@ func _ready():
 	$choice2.visible = false
 	$choice3.visible = false
 	$choice4.visible = false
+	$buttonclick.play()
+
 
 	
 func play_dialogue():
@@ -85,10 +91,7 @@ func play_dialogue():
 		$youlabel.visible = true
 		$friendlabel.visible = false
 		$boxflipped.visible = false
-	#if dialogue_list == dialogueend:
-		#queue_free find a way to make it end
-	#elif dialogue_list > dialogueend:
-		#dialogue_list += 3
+
 
 
 
@@ -97,6 +100,9 @@ func _process(delta):
 		play_dialogue()
 	if dialogue_list > dialogue.size():
 		options()
+	if dialogue_list > dialogueend:
+		queue_free()
+		
 
 
 func options():
@@ -133,7 +139,7 @@ func _on_choice_2_pressed():
 	$choice2.visible = false
 	$text.visible = true
 	play_dialogue()
-	$buttonclick.play()
+	$buttonclick2.play()
 
 func _on_choice_3_pressed():
 	dialogue += dialogue3
@@ -152,6 +158,6 @@ func _on_choice_4_pressed():
 	$choice4.visible = false
 	$text.visible = true
 	play_dialogue()
-	$buttonclick.play()
+	$buttonclick2.play()
 	
 	

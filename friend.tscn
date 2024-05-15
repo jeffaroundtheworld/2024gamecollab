@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4u3fevxoedqb"]
+[gd_scene load_steps=7 format=3 uid="uid://c4u3fevxoedqb"]
 
 [ext_resource type="Script" path="res://friend.gd" id="1_i35ar"]
-[ext_resource type="Texture2D" uid="uid://c2c5840hdjsx5" path="res://dialogue scene/friend1.PNG" id="2_1f8m3"]
+[ext_resource type="Texture2D" uid="uid://b4eljnopfksvr" path="res://dialogue scene/friend1.PNG" id="2_1f8m3"]
+[ext_resource type="AudioStream" uid="uid://cv3hgli5ca6uy" path="res://dialogue scene/595016__faithechetty__coughing.wav" id="3_6aook"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_iwnm5"]
 
@@ -14,6 +15,7 @@ billboard_keep_scale = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_033jx"]
 
 [node name="friend" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 0.938171, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_i35ar")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -22,7 +24,13 @@ mesh = SubResource("QuadMesh_iwnm5")
 surface_material_override/0 = SubResource("StandardMaterial3D_b6to5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.59308, 0, 0, 0, 1.68497, 0, 0, 0, 2.20774, 0, 0, 0)
+transform = Transform3D(1.75246, 0, 0, 0, 1.68497, 0, 0, 0, 2.13309, 0, 0, 0)
 shape = SubResource("BoxShape3D_033jx")
 
+[node name="friendalert" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_6aook")
+volume_db = 80.0
+max_distance = 60.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="tree_entered" from="CollisionShape3D" to="." method="_on_collision_shape_3d_tree_entered"]
