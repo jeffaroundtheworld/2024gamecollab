@@ -204,6 +204,7 @@ animations = [{
 [sub_resource type="Theme" id="Theme_e0edd"]
 
 [node name="dialogue scene" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
