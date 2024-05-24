@@ -12,7 +12,7 @@ func _process(delta):
 	pass
 
 
-func _on_triggerspawn_body_entered(body,triggerspawn):
+func _on_triggerspawn_body_entered(body):
 	if body.name == "Player":
 		var newenemy = enemy.instantiate()
 		add_child(newenemy)
