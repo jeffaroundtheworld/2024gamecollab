@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cuhwa0ohibysb"]
 
-[ext_resource type="PackedScene" uid="uid://c02gbhxbgtgn2" path="res://Level design/school_accessories/key_with_ring_and_tag/scene.gltf" id="1_gcjco"]
+[ext_resource type="PackedScene" uid="uid://dwajbirj84j0a" path="res://Level design/school_accessories/key_with_ring_and_tag/scene.gltf" id="1_gcjco"]
 [ext_resource type="Script" path="res://Level design/school_accessories/key.gd" id="1_vdnrv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vtuss"]

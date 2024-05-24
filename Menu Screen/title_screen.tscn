@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://Menu Screen/Main_Menu.gd" id="1_q615w"]
 [ext_resource type="AudioStream" uid="uid://d1iya05umqad8" path="res://sound effects/10 Minutes of CreepyScary Horror Background Sounds and Music.mp3" id="2_3oy4p"]
-[ext_resource type="FontFile" uid="uid://bpq8p72i75yb8" path="res://Menu Screen/fonts/Heartless.ttf" id="2_iuq38"]
+
+[ext_resource type="FontFile" uid="uid://du6vxte0j3p3u" path="res://Menu Screen/fonts/Heartless.ttf" id="2_iuq38"]
+
 [ext_resource type="VideoStream" path="res://Menu Screen/menu video/menu-screen.ogv" id="4_v7f7i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ke4p3"]
