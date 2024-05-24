@@ -20,6 +20,7 @@ var head_y_axis =0.0
 var camera_x_axis =0.0
 var health = 100
 var climb = 0
+var climb2 = 0
 var phase = 0
 var CorrectSound = preload("res://Player/concrete-footsteps-6752.mp3")
 
@@ -61,22 +62,34 @@ func _process(delta):
 	else: 
 		$AudioStreamPlayer3D.stop()
 		
-	if climb == 1:
-		position.x = 33.460
-		position.z = -0.02
+	if climb == 1 or climb2 == 1:
 		if Input.is_key_pressed(KEY_W):
 			velocity.y = 5
 		if Input.is_key_pressed(KEY_S):
 			velocity.y = -5
-			if position.y<1.9:
-				climb = 0
 		if !Input.is_key_pressed(KEY_S) and !Input.is_key_pressed(KEY_W):
 			velocity.y = 0
+		
+	if climb == 1:
+		position.x = 33.460
+		position.z = -0.02
+		if Input.is_key_pressed(KEY_S):
+			if position.y<1.9:
+				climb = 0
 		if position.y>14.5:
 			position.z = 1.5
 			climb = 0
-	
-	if climb == 0:
+			
+	if climb2 == 1:
+		position.x = -43.7
+		position.z = -44.14
+		if Input.is_key_pressed(KEY_S):
+			if position.y<-23.8:
+				climb2 = 0
+		if position.y>19.5:
+			position.z = -43
+			climb2 = 0
+	if climb == 0 and climb2 == 0:
 		direction = Input.get_axis("left","right")* head.basis.x + Input.get_axis("forewards", "backwards") * head.basis.z
 		velocity = velocity.lerp(direction * playerSpeed + velocity.y * Vector3.UP, playerAcceleration * delta)
 		if Input.is_action_just_pressed("jump") and is_on_floor():
