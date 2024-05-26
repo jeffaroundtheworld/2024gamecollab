@@ -1,7 +1,7 @@
 extends Area3D
 
 var cutscene = preload("res://dialogue scene/dialogue_scene.tscn")
-
+@onready var light = $OmniLight3D4
 
 
 func _ready():
@@ -15,6 +15,7 @@ func _on_body_entered(body):
 		var newcutscene = cutscene.instantiate()
 		add_child(newcutscene)
 		$CollisionShape3D.queue_free()
+		light.light_energy = 5
 	
 
 func _on_friendalert_finished():

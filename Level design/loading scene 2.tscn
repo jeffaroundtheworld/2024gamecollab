@@ -26,6 +26,7 @@ texture = SubResource("CanvasTexture_sp8n1")
 
 [node name="Label" type="Label" parent="."]
 top_level = true
+layout_mode = 0
 offset_left = 403.0
 offset_top = 256.0
 offset_right = 489.0
