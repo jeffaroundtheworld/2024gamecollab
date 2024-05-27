@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://mrle1wv4k17n"]
+[gd_scene load_steps=6 format=3 uid="uid://mrle1wv4k17n"]
 
 [ext_resource type="Script" path="res://Menu Screen/options_screen.gd" id="1_4xjp1"]
+[ext_resource type="FontFile" uid="uid://ckf7yhsdjve3p" path="res://Menu Screen/fonts/Heartless.ttf" id="3_ef61n"]
+[ext_resource type="Texture2D" uid="uid://ex034pf4tyuj" path="res://Menu Screen/Controls screen/mouseicon.png" id="5_6ahe5"]
+[ext_resource type="Texture2D" uid="uid://by7arr3q2nspx" path="res://Menu Screen/Controls screen/space-button-icon.png" id="5_6v76h"]
+[ext_resource type="Texture2D" uid="uid://cxcmh8d0xh657" path="res://Menu Screen/Controls screen/wasdd.png" id="5_htbl1"]
 
 [node name="OptionsScreen" type="Control"]
 layout_mode = 3
@@ -8,25 +12,81 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -3.0
-offset_top = 3.0
+offset_top = 1.0
 offset_right = -3.0
-offset_bottom = 3.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4xjp1")
 
 [node name="BackToMenu" type="Button" parent="."]
 layout_mode = 0
-offset_left = 493.0
-offset_top = 524.0
-offset_right = 650.0
-offset_bottom = 569.0
+offset_left = 509.0
+offset_top = 542.0
+offset_right = 666.0
+offset_bottom = 587.0
+theme_override_fonts/font = ExtResource("3_ef61n")
 text = "Back to Main Menu"
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="Move" type="Label" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 465.0
-text = "          Put controls and anything slse nessicary here"
+offset_left = 171.0
+offset_top = 211.0
+offset_right = 409.0
+offset_bottom = 355.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ef61n")
+theme_override_font_sizes/font_size = 50
+text = "Move"
+
+[node name="Look Around" type="Label" parent="."]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 203.0
+offset_right = 712.0
+offset_bottom = 347.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ef61n")
+theme_override_font_sizes/font_size = 50
+text = "Look Around
+"
+
+[node name="Jump" type="Label" parent="."]
+layout_mode = 0
+offset_left = 908.0
+offset_top = 206.0
+offset_right = 1146.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ef61n")
+theme_override_font_sizes/font_size = 50
+text = "Jump"
+
+[node name="Controls" type="Label" parent="."]
+layout_mode = 0
+offset_left = 422.0
+offset_top = 11.0
+offset_right = 727.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ef61n")
+theme_override_font_sizes/font_size = 100
+text = "Controls
+"
+
+[node name="Wasd" type="Sprite2D" parent="."]
+position = Vector2(209.75, 382)
+scale = Vector2(0.356445, 0.348633)
+texture = ExtResource("5_htbl1")
+
+[node name="Mouseicon" type="Sprite2D" parent="."]
+position = Vector2(578, 371)
+scale = Vector2(0.309392, 0.247774)
+texture = ExtResource("5_6ahe5")
+
+[node name="Space-button-icon" type="Sprite2D" parent="."]
+position = Vector2(940, 388)
+scale = Vector2(0.408692, 0.383152)
+texture = ExtResource("5_6v76h")
 
 [connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://mg47f5rrtyc6"]
+
+[ext_resource type="Script" path="res://Level design/Code/Area3D_school.gd" id="1_r8yuh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tudrw"]
+
+[node name="Area3D" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_r8yuh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21742, 0, -0.484657)
+shape = SubResource("BoxShape3D_tudrw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

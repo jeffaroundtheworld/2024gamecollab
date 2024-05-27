@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqyl885fflxu7"]
+
+[ext_resource type="Script" path="res://Level design/loading scene.gd" id="1_kekdr"]
+
+[sub_resource type="Theme" id="Theme_37sh3"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oj43n"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_sp8n1"]
+
+[node name="loading scene" type="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 3
+anchors_preset = 0
+theme = SubResource("Theme_37sh3")
+script = ExtResource("1_kekdr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_oj43n")
+layout_mode = 0
+offset_left = -75.0
+offset_top = -52.0
+offset_right = 1252.0
+offset_bottom = 756.0
+texture = SubResource("CanvasTexture_sp8n1")
+
+[node name="Label" type="Label" parent="."]
+top_level = true
+offset_left = 403.0
+offset_top = 256.0
+offset_right = 489.0
+offset_bottom = 279.0
+scale = Vector2(4.75, 4.75)
+text = "LOADING..."
+uppercase = true

@@ -1,5 +1,5 @@
 extends Node3D
-
+var count = 0
 var enemy = preload("res://enemy/enemy.tscn")
 
 # Called when the node enters the scene tree for the first time.
@@ -12,7 +12,9 @@ func _process(delta):
 	pass
 
 
-func _on_triggerspawn_body_entered(body):
-	if body.name == "Player":
+
+func _on_triggerspawn_body_entered(body,triggerspawn):
+	if body.name == "Player" and count == 0:
+		count = 1
 		var newenemy = enemy.instantiate()
 		add_child(newenemy)
