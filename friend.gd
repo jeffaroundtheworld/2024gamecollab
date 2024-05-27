@@ -11,11 +11,14 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		get_tree().paused = true
-		var newcutscene = cutscene.instantiate()
-		add_child(newcutscene)
-		$CollisionShape3D.queue_free()
-		light.light_energy = 5
+		if Globals.ending == 1:
+			pass
+		else:
+			get_tree().paused = true
+			var newcutscene = cutscene.instantiate()
+			add_child(newcutscene)
+			$CollisionShape3D.queue_free()
+			Globals.talked = 1
 	
 
 func _on_friendalert_finished():

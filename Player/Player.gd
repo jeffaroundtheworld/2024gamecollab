@@ -22,13 +22,15 @@ var camera_x_axis =0.0
 var health = 100
 var climb = 0
 var climb2 = 0
+var climb3 = 0
+var climb4 = 0
 var phase = 0
 var CorrectSound = preload("res://Player/concrete-footsteps-6752.mp3")
 
 func _ready():
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) #Capture mouse
-	#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN) # Full screen
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN) # Full screen
 
 func _input(event):
 #Calculate camera and flashlight motion
@@ -54,7 +56,6 @@ func _process(delta):
 			position.z = 61
 		else:
 			Globals.respawn = 0
-	print(Globals.respawn)
 #Going through hole in wall in level 2
 	if get_tree().current_scene.name == "Sketchfab_Scene_2" and position.y<-20: 
 		if position.x<-35.5 and position.x>-35.6:
@@ -79,7 +80,7 @@ func _process(delta):
 		$AudioStreamPlayer3D.stop()
 	
 #New player imput controls for ladder climbing
-	if climb == 1 or climb2 == 1:
+	if climb == 1 or climb2 == 1 or climb3 == 1 or climb4 == 1:
 		if Input.is_key_pressed(KEY_W):
 			velocity.y = 5
 		if Input.is_key_pressed(KEY_S):
@@ -107,9 +108,29 @@ func _process(delta):
 		if position.y>19.5:
 			position.z = -43
 			climb2 = 0
+	
+	if climb3 == 1:
+		position.x = -5.7
+		position.z = 22.78
+		if Input.is_key_pressed(KEY_S):
+			if position.y<-30.3:
+				climb3 = 0
+		if position.y>-26:
+			position.z = 22
+			climb3 = 0
+			
+	if climb4 == 1:
+		position.x = -8.3
+		position.z = -17.8
+		if Input.is_key_pressed(KEY_S):
+			if position.y<-26.7:
+				climb4 = 0
+		if position.y>-23:
+			position.z = -18.2
+			climb4 = 0
 
 #Regular player controls
-	if climb == 0 and climb2 == 0:
+	if climb == 0 and climb2 == 0 and climb3 == 0 and climb4 == 0:
 		direction = Input.get_axis("left","right")* head.basis.x + Input.get_axis("forewards", "backwards") * head.basis.z
 		velocity = velocity.lerp(direction * playerSpeed + velocity.y * Vector3.UP, playerAcceleration * delta)
 		if Input.is_action_just_pressed("jump") and is_on_floor():
