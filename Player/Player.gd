@@ -13,7 +13,6 @@ var attack = 0
 @onready var camera = $Head/Camera3D
 @onready var hand = $Hand
 @onready var flashlight = $Hand/SpotLight3D
-@onready var spawn_point = get_parent().get_node("Area3D2")
 
 
 var direction = Vector3.ZERO

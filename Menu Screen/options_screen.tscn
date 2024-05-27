@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://mrle1wv4k17n"]
 
 [ext_resource type="Script" path="res://Menu Screen/options_screen.gd" id="1_4xjp1"]
-[ext_resource type="FontFile" uid="uid://ckf7yhsdjve3p" path="res://Menu Screen/fonts/Heartless.ttf" id="3_ef61n"]
-[ext_resource type="Texture2D" uid="uid://ex034pf4tyuj" path="res://Menu Screen/Controls screen/mouseicon.png" id="5_6ahe5"]
-[ext_resource type="Texture2D" uid="uid://by7arr3q2nspx" path="res://Menu Screen/Controls screen/space-button-icon.png" id="5_6v76h"]
-[ext_resource type="Texture2D" uid="uid://cxcmh8d0xh657" path="res://Menu Screen/Controls screen/wasdd.png" id="5_htbl1"]
+[ext_resource type="FontFile" uid="uid://du6vxte0j3p3u" path="res://Menu Screen/fonts/Heartless.ttf" id="3_ef61n"]
+[ext_resource type="Texture2D" uid="uid://c47oc83hwfloy" path="res://Menu Screen/Controls screen/mouseicon.png" id="5_6ahe5"]
+[ext_resource type="Texture2D" uid="uid://cjwqu7sb107k2" path="res://Menu Screen/Controls screen/space-button-icon.png" id="5_6v76h"]
+[ext_resource type="Texture2D" uid="uid://dp2e45t8b3uqj" path="res://Menu Screen/Controls screen/wasdd.png" id="5_htbl1"]
 
 [node name="OptionsScreen" type="Control"]
 layout_mode = 3

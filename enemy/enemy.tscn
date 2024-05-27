@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://pks6uvct27hy"]
 
 [ext_resource type="Texture2D" uid="uid://cbo334yc8v2fu" path="res://enemy/assets/assets/monster_sprites.png" id="1_lcd4s"]
-[ext_resource type="AudioStream" uid="uid://c43ewr8n6iuor" path="res://sound effects/the-last-of-us-clicker-sound-made-with-Voicemod.mp3" id="2_s0cei"]
+[ext_resource type="AudioStream" uid="uid://lece745wu1l6" path="res://sound effects/the-last-of-us-clicker-sound-made-with-Voicemod.mp3" id="2_s0cei"]
 
 [sub_resource type="GDScript" id="GDScript_008ca"]
 script/source = "extends CharacterBody3D
@@ -10,7 +10,7 @@ script/source = "extends CharacterBody3D
 @export var move_speed = 3
 
 
-@onready var player = get_parent().get_parent().get_parent().get_node(\"Player\")
+@onready var player = get_parent().get_parent().get_node(\"Player\")
 var dir_x
 var dir_z
 const attack_range = 2
