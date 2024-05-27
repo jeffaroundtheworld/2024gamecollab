@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Cutscenes/introcutscene.gd" id="1_36epw"]
 [ext_resource type="VideoStream" path="res://Cutscenes/Intro_cutscene.ogv" id="2_5hlfe"]
-[ext_resource type="FontFile" uid="uid://y17hwur7r1hw" path="res://Menu Screen/fonts/Heartless.ttf" id="3_44i00"]
+[ext_resource type="FontFile" uid="uid://ckf7yhsdjve3p" path="res://Menu Screen/fonts/Heartless.ttf" id="3_44i00"]
 
 [node name="Introcutscene" type="Control"]
 layout_mode = 3
