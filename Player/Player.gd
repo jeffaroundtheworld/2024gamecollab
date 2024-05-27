@@ -7,7 +7,6 @@ extends CharacterBody3D
 @export var jumpForce = 5.4
 @export var gravity = 12.0
 var attack = 0
-var respawn = 0
 
 
 @onready var head =$Head
@@ -47,13 +46,15 @@ func _input(event):
 
 func _process(delta):
 #Spawn to correct point in level 2
-	#if respawn == 1 and get_tree().current_scene.name == "Sketchfab_Scene_2":
-		#respawn = 0
-		#spawn_point.position = position
-		#position.x = -5
-		#position.y = -30
-		#position.z = 61
-	print(respawn)
+	if Globals.respawn == 1: 
+		if get_tree().current_scene.name == "Sketchfab_Scene_2":
+			Globals.respawn = 0
+			position.x = -5
+			position.y = -30
+			position.z = 61
+		else:
+			Globals.respawn = 0
+	print(Globals.respawn)
 #Going through hole in wall in level 2
 	if get_tree().current_scene.name == "Sketchfab_Scene_2" and position.y<-20: 
 		if position.x<-35.5 and position.x>-35.6:
