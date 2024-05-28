@@ -13,7 +13,7 @@ func _process(delta):
 
 
 
-func _on_triggerspawn_body_entered(body,triggerspawn):
+func _on_triggerspawn_body_entered(body):
 	if body.name == "Player" and count == 0:
 		count = 1
 		var newenemy = enemy.instantiate()
