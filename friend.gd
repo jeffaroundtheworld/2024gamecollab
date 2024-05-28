@@ -12,19 +12,20 @@ func _ready():
 func _on_body_entered(body):
 	if body.name == "Player":
 		if Globals.ending == 1:
-			pass
+			$Thankyou.play
+			queue_free()
 		else:
 			get_tree().paused = true
 			var newcutscene = cutscene.instantiate()
 			add_child(newcutscene)
 			$CollisionShape3D.queue_free()
 			Globals.talked = 1
-	
+			
 
 func _on_friendalert_finished():
 
-	if get_node("CollisionShape3D") != null:
-		$friendalert.play()
-	else:
+	if Globals.cough ==1:
 		$friendalert.queue_free()
+	else:
+		$friendalert.play()
 
