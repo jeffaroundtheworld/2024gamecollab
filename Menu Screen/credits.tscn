@@ -41,7 +41,7 @@ text = "Kod - Art/story design
 Zorien Markotic - nothing
 Jack Vallence - quality assurance
 Dylan Lockier - Team Genius 
-Jack Carlisle"
+Jack Carlisle - Level Designer"
 
 [node name="credits2" type="Label" parent="."]
 layout_mode = 0
