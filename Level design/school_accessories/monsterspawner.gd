@@ -18,3 +18,7 @@ func _on_triggerspawn_body_entered(body):
 		count = 1
 		var newenemy = enemy.instantiate()
 		add_child(newenemy)
+
+
+func _on_triggerspawn_2_body_entered(body):
+	pass # Replace with function body.

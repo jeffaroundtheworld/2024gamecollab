@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dub05mq7an7wx"]
+[gd_scene load_steps=9 format=3 uid="uid://dub05mq7an7wx"]
 
 [ext_resource type="Script" path="res://Menu Screen/Main_Menu.gd" id="1_q615w"]
 [ext_resource type="AudioStream" uid="uid://d1iya05umqad8" path="res://sound effects/10 Minutes of CreepyScary Horror Background Sounds and Music.mp3" id="2_3oy4p"]
-
-[ext_resource type="FontFile" uid="uid://ckf7yhsdjve3p" path="res://Menu Screen/fonts/Heartless.ttf" id="2_iuq38"]
-
+[ext_resource type="FontFile" uid="uid://du6vxte0j3p3u" path="res://Menu Screen/fonts/Heartless.ttf" id="2_iuq38"]
 [ext_resource type="VideoStream" path="res://Menu Screen/menu video/menu-screen.ogv" id="4_v7f7i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ke4p3"]
@@ -12,6 +10,8 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kv4jg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxdt6"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fycaq"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -39,10 +39,10 @@ loop = true
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 2
-offset_left = 2.0
-offset_top = -15.0
-offset_right = 317.0
-offset_bottom = 123.0
+offset_left = 6.81796
+offset_top = 130.0
+offset_right = 321.818
+offset_bottom = 268.0
 rotation = 0.122173
 theme_override_colors/font_color = Color(0.352941, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_iuq38")
@@ -54,10 +54,10 @@ flat = true
 [node name="quit" type="Button" parent="."]
 material = SubResource("CanvasItemMaterial_kv4jg")
 layout_mode = 2
-offset_left = 5.0
-offset_top = 133.0
-offset_right = 320.0
-offset_bottom = 256.0
+offset_left = 33.818
+offset_top = 413.0
+offset_right = 348.818
+offset_bottom = 536.0
 rotation = 0.122173
 theme_override_colors/font_color = Color(0.352574, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_iuq38")
@@ -69,10 +69,10 @@ flat = true
 [node name="Controls" type="Button" parent="."]
 material = SubResource("CanvasItemMaterial_kv4jg")
 layout_mode = 2
-offset_left = 0.999999
-offset_top = 269.0
-offset_right = 316.0
-offset_bottom = 392.0
+offset_left = 24.818
+offset_top = 264.0
+offset_right = 339.818
+offset_bottom = 387.0
 rotation = 0.122173
 theme_override_colors/font_color = Color(0.352574, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_iuq38")
@@ -84,6 +84,19 @@ flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_3oy4p")
+
+[node name="Label" type="Label" parent="."]
+material = SubResource("CanvasItemMaterial_fycaq")
+layout_mode = 0
+offset_left = 290.0
+offset_top = 4.0
+offset_right = 860.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0.352941, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iuq38")
+theme_override_font_sizes/font_size = 120
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kxdt6")
+text = "HAUNTED HALLS"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

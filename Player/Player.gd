@@ -13,7 +13,6 @@ var attack = 0
 @onready var camera = $Head/Camera3D
 @onready var hand = $Hand
 @onready var flashlight = $Hand/SpotLight3D
-@onready var spawn_point = get_parent().get_node("Area3D2")
 
 
 var direction = Vector3.ZERO
@@ -126,7 +125,7 @@ func _process(delta):
 			if position.y<-26.7:
 				climb4 = 0
 		if position.y>-23:
-			position.z = -18.2
+			position.z = -18
 			climb4 = 0
 
 #Regular player controls
@@ -158,7 +157,8 @@ func _process(delta):
 		else:
 			camera.damages = 0
 	else:
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://Menu Screen/die screen.tscn")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 #Write motion
 	move_and_slide()

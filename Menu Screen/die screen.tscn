@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2ksu4nfkrt6t"]
+
+[ext_resource type="Script" path="res://Menu Screen/die screen.gd" id="1_7p7p7"]
+[ext_resource type="Texture2D" uid="uid://cmuo72xms1wq5" path="res://SPRITES/Skull.png" id="1_vtmmi"]
+[ext_resource type="FontFile" uid="uid://du6vxte0j3p3u" path="res://Menu Screen/fonts/Heartless.ttf" id="2_wkecf"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rjofv"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_hblvy"]
+specular_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_702rr"]
+
+[node name="Control" type="Control"]
+material = SubResource("CanvasItemMaterial_rjofv")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7p7p7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(577.75, 323.25)
+scale = Vector2(1156.5, 647.5)
+texture = SubResource("CanvasTexture_hblvy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(574, 311)
+scale = Vector2(2.56222, 2.33333)
+texture = ExtResource("1_vtmmi")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 174.0
+offset_right = 893.0
+offset_bottom = 489.0
+pivot_offset = Vector2(402, 356)
+theme_override_colors/font_color = Color(0.705939, 4.12721e-06, 2.31028e-06, 1)
+theme_override_fonts/font = ExtResource("2_wkecf")
+theme_override_font_sizes/font_size = 220
+text = "YOU DIED"
+
+[node name="Return" type="Button" parent="."]
+offset_left = 22.0
+offset_top = 26.0
+offset_right = 343.0
+offset_bottom = 163.0
+theme_override_colors/font_color = Color(0.352941, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wkecf")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_702rr")
+text = "Try Again"
+flat = true
+
+[connection signal="pressed" from="Return" to="." method="_on_play_pressed"]
