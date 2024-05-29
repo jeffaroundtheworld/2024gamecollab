@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://c4u3fevxoedqb"]
 
 [ext_resource type="Script" path="res://friend.gd" id="1_i35ar"]
-[ext_resource type="Texture2D" uid="uid://b4eljnopfksvr" path="res://dialogue scene/friend1.PNG" id="2_1f8m3"]
-[ext_resource type="AudioStream" uid="uid://cv3hgli5ca6uy" path="res://dialogue scene/595016__faithechetty__coughing.wav" id="3_6aook"]
-[ext_resource type="AudioStream" uid="uid://b653imaqba4s" path="res://sound effects/505390__duncancantdie__thankyouwmv.mp3" id="4_iv87f"]
+[ext_resource type="Texture2D" uid="uid://c2c5840hdjsx5" path="res://dialogue scene/friend1.PNG" id="2_1f8m3"]
+[ext_resource type="AudioStream" uid="uid://byn6tatnnqg6a" path="res://dialogue scene/595016__faithechetty__coughing.wav" id="3_6aook"]
+[ext_resource type="AudioStream" uid="uid://dkfkta8iuxv3e" path="res://sound effects/505390__duncancantdie__thankyouwmv.mp3" id="4_iv87f"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_iwnm5"]
 
@@ -35,6 +35,8 @@ max_distance = 40.0
 
 [node name="Thankyou" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_iv87f")
+volume_db = 4.77
+pitch_scale = 1.15
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="tree_entered" from="CollisionShape3D" to="." method="_on_collision_shape_3d_tree_entered"]
