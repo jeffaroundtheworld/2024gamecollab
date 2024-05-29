@@ -113,6 +113,7 @@ func _process(delta):
 	if dialogue_list > dialogueend:
 		queue_free()
 		Globals.cough += 1
+		print(Globals.ending)
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		get_tree().paused = false
 		

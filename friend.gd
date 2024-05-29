@@ -8,11 +8,12 @@ func _ready():
 	$friendalert.play()
 
 
-
 func _on_body_entered(body):
 	if body.name == "Player":
 		if Globals.ending == 1:
 			$Thankyou.play
+			Globals.ending +=1
+			print(Globals.ending)
 			queue_free()
 		else:
 			get_tree().paused = true
@@ -23,9 +24,8 @@ func _on_body_entered(body):
 			
 
 func _on_friendalert_finished():
-
 	if Globals.cough ==1:
-		$friendalert.queue_free()
+		$friendalert.stop()
 	else:
 		$friendalert.play()
 
