@@ -1,6 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://bbi8o8skkgd3y"]
 
 [ext_resource type="Script" path="res://dialogue scene/dialogue box.gd" id="1_2difs"]
+
 [ext_resource type="AudioStream" uid="uid://vo6sdcndwpal" path="res://dialogue scene/557191__szegvari__little-dark-house-soundscape.wav" id="2_pwut8"]
 [ext_resource type="Texture2D" uid="uid://dfw87njvj3b7c" path="res://dialogue scene/Screenshot 2024-05-10 011932.png" id="3_65inv"]
 [ext_resource type="AudioStream" uid="uid://2abxwhbl4m83" path="res://sound effects/dialogue sound.wav" id="3_v87co"]
@@ -19,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://vst3b0ryw652" path="res://dialogue scene/player4.PNG" id="16_0d3rl"]
 [ext_resource type="Texture2D" uid="uid://bxxuqnhob5wna" path="res://dialogue scene/player6.PNG" id="17_c8fne"]
 [ext_resource type="Texture2D" uid="uid://eykh13vuf2vi" path="res://dialogue scene/player5.PNG" id="18_oqs4u"]
+
 
 [sub_resource type="Theme" id="Theme_behuv"]
 default_font = ExtResource("5_pid2d")
