@@ -16,4 +16,9 @@ func _on_body_entered(body):
 	if body.name == "Player":
 		Globals.ending += 1
 		print(Globals.ending)
-		queue_free()
+		$keycardgrab.play()
+		
+
+
+func _on_keycardgrab_finished():
+	queue_free()

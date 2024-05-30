@@ -15,4 +15,9 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.name == "Player":
 		emit_signal("open_doors")
-		queue_free()
+		$keygrab.play()
+	
+
+
+func _on_keygrab_finished():
+	queue_free()
