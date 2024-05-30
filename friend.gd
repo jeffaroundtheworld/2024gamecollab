@@ -11,10 +11,10 @@ func _ready():
 func _on_body_entered(body):
 	if body.name == "Player":
 		if Globals.ending == 1:
-			$Thankyou.play()
+			$Thankyou.play
 			Globals.ending +=1
 			print(Globals.ending)
-			
+			queue_free()
 		else:
 			get_tree().paused = true
 			var newcutscene = cutscene.instantiate()
@@ -29,7 +29,3 @@ func _on_friendalert_finished():
 	else:
 		$friendalert.play()
 
-
-
-func _on_thankyou_finished():
-	queue_free()

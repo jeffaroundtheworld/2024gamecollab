@@ -20,9 +20,11 @@ func _on_triggerspawn_body_entered(body):
 		add_child(newenemy)
 
 
+
 func _on_friend_body_exited(body):
 	if body.name == "Player" and count == 0:
 		count = 1
 		var newenemy = enemy.instantiate()
 		add_child(newenemy)
+
 
