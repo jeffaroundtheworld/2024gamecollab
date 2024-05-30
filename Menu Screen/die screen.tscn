@@ -45,7 +45,6 @@ theme_override_font_sizes/font_size = 220
 text = "YOU DIED"
 
 [node name="Return" type="Button" parent="."]
-layout_mode = 0
 offset_left = 22.0
 offset_top = 26.0
 offset_right = 343.0
