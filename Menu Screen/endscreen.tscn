@@ -1,29 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfh7cdia2dk67"]
-
-[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_cjigc"]
-file = "res://Menu Screen/menu video/20240501100004.ogv"
+[gd_scene format=3 uid="uid://cfh7cdia2dk67"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = 13.0
-offset_right = 24.0
-offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-custom_minimum_size = Vector2(0.5, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.001
-offset_left = -316.0
-offset_top = -190.0
-offset_right = 1602.83
-offset_bottom = 898.0
-stream = SubResource("VideoStreamTheora_cjigc")
-autoplay = true
-loop = true
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 724.0
+offset_bottom = 430.0
