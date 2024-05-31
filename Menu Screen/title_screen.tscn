@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Menu Screen/Main_Menu.gd" id="1_q615w"]
 [ext_resource type="AudioStream" uid="uid://d1iya05umqad8" path="res://sound effects/10 Minutes of CreepyScary Horror Background Sounds and Music.mp3" id="2_3oy4p"]
-[ext_resource type="FontFile" uid="uid://dwxbyg4jv163t" path="res://Menu Screen/fonts/Heartless.ttf" id="2_iuq38"]
+[ext_resource type="FontFile" uid="uid://ckf7yhsdjve3p" path="res://Menu Screen/fonts/Heartless.ttf" id="2_iuq38"]
 [ext_resource type="VideoStream" path="res://Menu Screen/menu video/menu-screen.ogv" id="4_v7f7i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ke4p3"]
@@ -39,10 +39,10 @@ loop = true
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 2
-offset_left = 6.81796
-offset_top = 130.0
-offset_right = 321.818
-offset_bottom = 268.0
+offset_left = -23.0
+offset_top = 101.0
+offset_right = 292.0
+offset_bottom = 239.0
 rotation = 0.122173
 theme_override_colors/font_color = Color(0.352941, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_iuq38")
@@ -51,13 +51,27 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_ke4p3")
 text = "play"
 flat = true
 
+[node name="Credits" type="Button" parent="."]
+layout_mode = 2
+offset_left = 13.0
+offset_top = 322.0
+offset_right = 328.0
+offset_bottom = 460.0
+rotation = 0.122173
+theme_override_colors/font_color = Color(0.352941, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iuq38")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ke4p3")
+text = "Credits"
+flat = true
+
 [node name="quit" type="Button" parent="."]
 material = SubResource("CanvasItemMaterial_kv4jg")
 layout_mode = 2
-offset_left = 33.818
-offset_top = 413.0
-offset_right = 348.818
-offset_bottom = 536.0
+offset_left = 44.0
+offset_top = 447.0
+offset_right = 359.0
+offset_bottom = 570.0
 rotation = 0.122173
 theme_override_colors/font_color = Color(0.352574, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_iuq38")
@@ -69,10 +83,10 @@ flat = true
 [node name="Controls" type="Button" parent="."]
 material = SubResource("CanvasItemMaterial_kv4jg")
 layout_mode = 2
-offset_left = 24.818
-offset_top = 264.0
-offset_right = 339.818
-offset_bottom = 387.0
+offset_left = 32.0
+offset_top = 219.0
+offset_right = 347.0
+offset_bottom = 342.0
 rotation = 0.122173
 theme_override_colors/font_color = Color(0.352574, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_iuq38")
@@ -99,5 +113,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_kxdt6")
 text = "HAUNTED HALLS"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Controls" to="." method="_on_controls_pressed"]
