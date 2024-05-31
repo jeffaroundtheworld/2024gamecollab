@@ -1,7 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://r74o7boqj3md"]
 
-
-[ext_resource type="FontFile" uid="uid://blfhy6c3u2q7c" path="res://Menu Screen/fonts/Heartless.ttf" id="1_ifhho"]
+[ext_resource type="FontFile" uid="uid://du6vxte0j3p3u" path="res://Menu Screen/fonts/Heartless.ttf" id="1_ifhho"]
 [ext_resource type="Script" path="res://Level design/school_accessories/Button.gd" id="2_r5m4x"]
 
 [node name="Control" type="Control"]
@@ -32,30 +31,30 @@ text = "Credits "
 
 [node name="credits" type="Label" parent="."]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 204.0
-offset_right = 650.0
-offset_bottom = 546.0
+offset_left = 36.0
+offset_top = 198.0
+offset_right = 644.0
+offset_bottom = 471.0
 theme_override_fonts/font = ExtResource("1_ifhho")
 theme_override_font_sizes/font_size = 45
-text = "Kod - Art/story designer
-Zorien Markotic - coding
-Jack Vallence - quality assurance
+text = "Kod - Art/story design
+Zorien Markotic - Coding
+Jack Vallence - Enemy/Q.a.
 Dylan Lockier - Team Genius 
-Jack Carlisle - Level Designer
+Jack Carlisle - Level Designer"
 
 [node name="credits2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 612.0
-offset_top = 202.0
-offset_right = 1220.0
-offset_bottom = 539.0
+offset_left = 615.0
+offset_top = 190.0
+offset_right = 1223.0
+offset_bottom = 527.0
 theme_override_fonts/font = ExtResource("1_ifhho")
 theme_override_font_sizes/font_size = 45
 text = "Edie Houston - Cutscene designer
-Mya J.S - graphics/level design
-Rhys watson - Everything
-AJ leach - credit screen maker
+Mya J.S - Graphics/level design
+Rhys watson - Audio/graphics
+AJ leach - Credit screen maker
 "
 
 [node name="Button" type="Button" parent="."]
