@@ -50,9 +50,9 @@ func _process(delta):
 	if Globals.respawn == 1: 
 		if get_tree().current_scene.name == "Sketchfab_Scene_2":
 			Globals.respawn = 0
-			position.x = -5
-			position.y = -30
-			position.z = 61
+			position.x = 62
+			position.y = -31.3
+			position.z = 67.6
 		else:
 			Globals.respawn = 0
 #Going through hole in wall in level 2
