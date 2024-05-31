@@ -1,40 +1,40 @@
 [gd_scene load_steps=10 format=3 uid="uid://pks6uvct27hy"]
 
 [ext_resource type="Texture2D" uid="uid://cbo334yc8v2fu" path="res://enemy/assets/assets/monster_sprites.png" id="1_lcd4s"]
-[ext_resource type="AudioStream" uid="uid://idcow1ihm7gt" path="res://sound effects/the-last-of-us-clicker-sound-made-with-Voicemod.mp3" id="2_s0cei"]
+[ext_resource type="AudioStream" uid="uid://dk8l0nvlkvq4t" path="res://sound effects/the-last-of-us-clicker-sound-made-with-Voicemod.mp3" id="2_s0cei"]
 
 [sub_resource type="GDScript" id="GDScript_008ca"]
 script/source = "extends CharacterBody3D
-@onready var player = get_parent().get_parent().get_parent().get_node(\"Player\")
-@onready var spawner = get_parent()
-@export var move_speed = 4
 
+@onready var animated_sprite_3d = $AnimatedSprite3D
+@export var move_speed = 3
+
+
+@onready var player = get_parent().get_parent().get_parent().get_node(\"Player\")
 var dir_x
 var dir_z
-var dir_y
 const attack_range = 2
-const hide_range = 15
-
 
 func _physics_process(delta):
+
+	pass
 	var dir = player.global_position - global_position
+	var dir_y = 0
 	dir = dir.normalized()
 	dir_x = abs(abs(player.global_position.x) - abs(global_position.x))
 	dir_z = abs(abs(player.global_position.z) - abs(global_position.z))
-	dir_y = abs(abs(player.global_position.y) - abs(global_position.y))
 	
 	velocity = dir * move_speed
-	
-	if (dir_x<attack_range) and (dir_z<attack_range) and (dir_y<0.5):
+	if (dir_x<attack_range) and (dir_z<attack_range):
 		player.attack = 1
+		print(\"attack\")
 	else:
+		print(\"not attacking\")
 		player.attack = 0
 	
-	if (dir_x>hide_range) or (dir_z>hide_range) or (dir_y>hide_range):
-		spawner.count = 0
-		queue_free()
-	
 	move_and_slide()
+	
+	
 "
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0mdwt"]

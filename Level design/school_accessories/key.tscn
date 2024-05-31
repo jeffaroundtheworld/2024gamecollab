@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cuhwa0ohibysb"]
+[gd_scene load_steps=4 format=3 uid="uid://cuhwa0ohibysb"]
 
 [ext_resource type="PackedScene" uid="uid://dwajbirj84j0a" path="res://Level design/school_accessories/key_with_ring_and_tag/scene.gltf" id="1_gcjco"]
 [ext_resource type="Script" path="res://Level design/school_accessories/key.gd" id="1_vdnrv"]
-[ext_resource type="AudioStream" uid="uid://qky1a6cao2e3" path="res://sound effects/669339__geoff-bremner-audio__keys-grab-hard-1.mp3" id="3_rt5sw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vtuss"]
 
@@ -16,9 +15,4 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1.08865, 0, 2.033)
 transform = Transform3D(0.271044, 2.54678, 0, -1.6854, 0.409569, 0, 0, 0, 1.46849, -1.08347, 0, 2.14576)
 shape = SubResource("CapsuleShape3D_vtuss")
 
-[node name="keygrab" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_rt5sw")
-volume_db = 10.592
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="finished" from="keygrab" to="." method="_on_keygrab_finished"]
