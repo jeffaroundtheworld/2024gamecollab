@@ -35,6 +35,8 @@ max_distance = 40.0
 
 [node name="Thankyou" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_iv87f")
+volume_db = 4.77
+pitch_scale = 1.15
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="tree_entered" from="CollisionShape3D" to="." method="_on_collision_shape_3d_tree_entered"]

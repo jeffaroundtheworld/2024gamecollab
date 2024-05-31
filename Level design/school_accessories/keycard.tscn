@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://mdomconetvk2"]
 
-[ext_resource type="PackedScene" uid="uid://dvgjngrx1icxg" path="res://Level design/school_accessories/keycard/scene.gltf" id="1_ecwen"]
+[ext_resource type="PackedScene" uid="uid://dhym34dfdkddd" path="res://Level design/school_accessories/keycard/scene.gltf" id="1_ecwen"]
 [ext_resource type="Script" path="res://Level design/school_accessories/keycard.gd" id="1_ytle2"]
 [ext_resource type="AudioStream" uid="uid://qky1a6cao2e3" path="res://sound effects/669339__geoff-bremner-audio__keys-grab-hard-1.mp3" id="3_7ogxa"]
 
