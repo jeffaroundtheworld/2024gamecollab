@@ -1,25 +1,25 @@
 [gd_scene load_steps=26 format=3 uid="uid://bbi8o8skkgd3y"]
 
 [ext_resource type="Script" path="res://dialogue scene/dialogue box.gd" id="1_2difs"]
-[ext_resource type="AudioStream" uid="uid://vo6sdcndwpal" path="res://dialogue scene/557191__szegvari__little-dark-house-soundscape.wav" id="2_pwut8"]
-[ext_resource type="Texture2D" uid="uid://dfw87njvj3b7c" path="res://dialogue scene/Screenshot 2024-05-10 011932.png" id="3_65inv"]
-[ext_resource type="AudioStream" uid="uid://2abxwhbl4m83" path="res://sound effects/dialogue sound.wav" id="3_v87co"]
-[ext_resource type="Texture2D" uid="uid://dq0o0jgtkxuyp" path="res://dialogue scene/PngItem_2721759.png" id="4_87la1"]
+[ext_resource type="AudioStream" uid="uid://d2acjh748vt18" path="res://dialogue scene/557191__szegvari__little-dark-house-soundscape.wav" id="2_pwut8"]
+[ext_resource type="Texture2D" uid="uid://d18648fgdf6s7" path="res://dialogue scene/Screenshot 2024-05-10 011932.png" id="3_65inv"]
+[ext_resource type="AudioStream" uid="uid://b2tesrcii2v0a" path="res://sound effects/546100__balolo__noise-loop-[AudioTrimmer.com].mp3" id="3_7778k"]
+[ext_resource type="Texture2D" uid="uid://dy8ri86f2o24j" path="res://dialogue scene/PngItem_2721759.png" id="4_87la1"]
 [ext_resource type="AudioStream" uid="uid://xn064c81gbee" path="res://sound effects/Flashlight Sound.mp3" id="4_mr6hm"]
-[ext_resource type="FontFile" uid="uid://didubjnh4uuy3" path="res://dialogue scene/SplendidN.ttf" id="5_pid2d"]
-[ext_resource type="FontFile" uid="uid://buh2j3dovla4y" path="res://dialogue scene/SplendidB.ttf" id="6_4rcft"]
-[ext_resource type="Texture2D" uid="uid://4pnr1rk5qe4i" path="res://dialogue scene/friend4.PNG" id="7_ryds4"]
-[ext_resource type="Texture2D" uid="uid://bysmbi2yy3hea" path="res://dialogue scene/friend1.PNG" id="8_ch7qp"]
-[ext_resource type="Texture2D" uid="uid://dsfyff02hpntj" path="res://dialogue scene/friend3.PNG" id="9_8rbas"]
-[ext_resource type="Texture2D" uid="uid://bcg4kjdoh1pqt" path="res://dialogue scene/friend2.PNG" id="10_dafpg"]
-[ext_resource type="Texture2D" uid="uid://bqk8vsywhq7ob" path="res://dialogue scene/friend6.PNG" id="11_goab3"]
-[ext_resource type="Texture2D" uid="uid://xjw8ulfu1jxe" path="res://dialogue scene/friend5.PNG" id="12_0iemu"]
-[ext_resource type="Texture2D" uid="uid://rgspfuv34nok" path="res://dialogue scene/player2.PNG" id="13_70pat"]
-[ext_resource type="Texture2D" uid="uid://chewwfmoht5j8" path="res://dialogue scene/player3.PNG" id="14_2wbmx"]
-[ext_resource type="Texture2D" uid="uid://geeovsiq5sfv" path="res://dialogue scene/player1.PNG" id="15_yolbq"]
-[ext_resource type="Texture2D" uid="uid://vst3b0ryw652" path="res://dialogue scene/player4.PNG" id="16_0d3rl"]
-[ext_resource type="Texture2D" uid="uid://bxxuqnhob5wna" path="res://dialogue scene/player6.PNG" id="17_c8fne"]
-[ext_resource type="Texture2D" uid="uid://eykh13vuf2vi" path="res://dialogue scene/player5.PNG" id="18_oqs4u"]
+[ext_resource type="FontFile" uid="uid://dal5i5ykx8joy" path="res://dialogue scene/SplendidN.ttf" id="5_pid2d"]
+[ext_resource type="FontFile" uid="uid://dahys0a1h4hwy" path="res://dialogue scene/SplendidB.ttf" id="6_4rcft"]
+[ext_resource type="Texture2D" uid="uid://dnp1dvs6rhg1n" path="res://dialogue scene/friend4.PNG" id="7_ryds4"]
+[ext_resource type="Texture2D" uid="uid://b4eljnopfksvr" path="res://dialogue scene/friend1.PNG" id="8_ch7qp"]
+[ext_resource type="Texture2D" uid="uid://b6sgosbfmklwd" path="res://dialogue scene/friend3.PNG" id="9_8rbas"]
+[ext_resource type="Texture2D" uid="uid://bb0sapfrgvhgm" path="res://dialogue scene/friend2.PNG" id="10_dafpg"]
+[ext_resource type="Texture2D" uid="uid://cvft4jdg0jydh" path="res://dialogue scene/friend6.PNG" id="11_goab3"]
+[ext_resource type="Texture2D" uid="uid://dj4tblo8vl0ek" path="res://dialogue scene/friend5.PNG" id="12_0iemu"]
+[ext_resource type="Texture2D" uid="uid://btgwoxmdrmypv" path="res://dialogue scene/player2.PNG" id="13_70pat"]
+[ext_resource type="Texture2D" uid="uid://b2p3kdr8a8iin" path="res://dialogue scene/player3.PNG" id="14_2wbmx"]
+[ext_resource type="Texture2D" uid="uid://h2a0yxlqppte" path="res://dialogue scene/player1.PNG" id="15_yolbq"]
+[ext_resource type="Texture2D" uid="uid://dp3u7xeyafuq1" path="res://dialogue scene/player4.PNG" id="16_0d3rl"]
+[ext_resource type="Texture2D" uid="uid://cckcjtq3x1rkj" path="res://dialogue scene/player6.PNG" id="17_c8fne"]
+[ext_resource type="Texture2D" uid="uid://bmgcpx2ogww73" path="res://dialogue scene/player5.PNG" id="18_oqs4u"]
 
 [sub_resource type="Theme" id="Theme_behuv"]
 default_font = ExtResource("5_pid2d")
@@ -233,8 +233,8 @@ volume_db = -32.23
 pitch_scale = 0.9
 autoplay = true
 
-[node name="buttonclick" type="AudioStreamPlayer" parent="dialogue box"]
-stream = ExtResource("3_v87co")
+[node name="startsound" type="AudioStreamPlayer" parent="dialogue box"]
+stream = ExtResource("3_7778k")
 volume_db = 12.0
 pitch_scale = 0.51
 

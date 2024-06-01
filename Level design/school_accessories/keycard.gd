@@ -3,7 +3,7 @@ extends Area3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Globals.ending == 1:
+	if Globals.ending > 0:
 		queue_free()
 
 

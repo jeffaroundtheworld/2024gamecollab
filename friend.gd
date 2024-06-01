@@ -10,11 +10,10 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		if Globals.ending == 1:
+		if Globals.ending > 0:
 			$Thankyou.play()
 			Globals.ending +=1
 			print(Globals.ending)
-			
 		else:
 			get_tree().paused = true
 			var newcutscene = cutscene.instantiate()
