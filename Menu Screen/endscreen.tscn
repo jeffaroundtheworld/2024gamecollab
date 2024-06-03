@@ -1,16 +1,57 @@
-[gd_scene format=3 uid="uid://cfh7cdia2dk67"]
+[gd_scene load_steps=4 format=3 uid="uid://cfh7cdia2dk67"]
+
+[ext_resource type="FontFile" uid="uid://dwxbyg4jv163t" path="res://Menu Screen/fonts/Heartless.ttf" id="1_ekpb0"]
+[ext_resource type="Script" path="res://Menu Screen/menu.gd" id="2_4k4r3"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_cjigc"]
+file = "res://Menu Screen/menu video/20240501100004.ogv"
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+anchor_right = 0.998
 anchor_bottom = 1.0
+offset_right = 0.303955
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+custom_minimum_size = Vector2(0.5, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.001
+offset_right = 1159.85
+offset_bottom = 643.0
+stream = SubResource("VideoStreamTheora_cjigc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="menu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.036
+anchor_right = -0.036
+offset_left = 60.048
+offset_top = 305.0
+offset_right = 342.048
+offset_bottom = 462.0
+rotation = 0.122173
+theme_override_colors/font_hover_color = Color(0.352941, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ekpb0")
+theme_override_font_sizes/font_size = 90
+text = "Menu"
+flat = true
+script = ExtResource("2_4k4r3")
+
+[node name="congrats" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 724.0
-offset_bottom = 430.0
+offset_left = 52.0
+offset_top = 35.0
+offset_right = 1676.0
+offset_bottom = 372.0
+rotation = 0.122173
+theme_override_fonts/font = ExtResource("1_ekpb0")
+theme_override_font_sizes/font_size = 107
+text = "You escaped,
+ but left your friend behind"
