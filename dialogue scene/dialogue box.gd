@@ -71,7 +71,6 @@ func _ready():
 	$choice2.visible = false
 	$choice3.visible = false
 	$choice4.visible = false
-	$buttonclick.play()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 
@@ -141,7 +140,7 @@ func _on_choice_1_pressed():
 	$choice2.visible = false
 	$text.visible = true
 	play_dialogue()
-	$buttonclick.play()
+	$buttonclick2.play()
 	
 
 
@@ -163,7 +162,7 @@ func _on_choice_3_pressed():
 	$choice4.visible = false
 	$text.visible = true
 	play_dialogue()
-	$buttonclick.play()
+	$buttonclick2.play()
 
 
 func _on_choice_4_pressed():
