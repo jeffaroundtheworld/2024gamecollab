@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://blenvxpnly3lg"]
+[gd_scene load_steps=6 format=3 uid="uid://blenvxpnly3lg"]
 
 [ext_resource type="VideoStream" path="res://Menu Screen/menu video/20240501100004.ogv" id="1_t20qj"]
-[ext_resource type="FontFile" uid="uid://du6vxte0j3p3u" path="res://Menu Screen/fonts/Heartless.ttf" id="2_kocis"]
+[ext_resource type="FontFile" uid="uid://blfhy6c3u2q7c" path="res://Menu Screen/fonts/Heartless.ttf" id="2_kocis"]
 [ext_resource type="Script" path="res://Menu Screen/menu.gd" id="3_rhfoo"]
 [ext_resource type="AudioStream" uid="uid://d1iya05umqad8" path="res://sound effects/10 Minutes of CreepyScary Horror Background Sounds and Music.mp3" id="4_ahtk0"]
+[ext_resource type="AudioStream" uid="uid://dipcaoyxj3nbi" path="res://sound effects/588392__funwithsound__music-dramatic-orchestral-ending-2.mp3" id="5_4hc65"]
 
 [node name="ending 1" type="Control"]
 layout_mode = 3
@@ -57,4 +58,9 @@ your friend died"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_ahtk0")
+autoplay = true
+
+[node name="win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4hc65")
+pitch_scale = 0.85
 autoplay = true

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxwljrq7n1nv6"]
+[gd_scene load_steps=5 format=3 uid="uid://bxwljrq7n1nv6"]
 
-[ext_resource type="FontFile" uid="uid://dwxbyg4jv163t" path="res://Menu Screen/fonts/Heartless.ttf" id="1_7c61q"]
+[ext_resource type="FontFile" uid="uid://blfhy6c3u2q7c" path="res://Menu Screen/fonts/Heartless.ttf" id="1_7c61q"]
 [ext_resource type="VideoStream" path="res://Menu Screen/menu video/20240501100004.ogv" id="2_wtb00"]
 [ext_resource type="Script" path="res://Menu Screen/menu.gd" id="3_wf725"]
+[ext_resource type="AudioStream" uid="uid://dipcaoyxj3nbi" path="res://sound effects/588392__funwithsound__music-dramatic-orchestral-ending-2.mp3" id="4_3oqr4"]
 
 [node name="Win Screen" type="Control"]
 layout_mode = 3
@@ -52,3 +53,8 @@ rotation = 0.122173
 theme_override_fonts/font = ExtResource("1_7c61q")
 theme_override_font_sizes/font_size = 100
 text = "You and your friend escaped"
+
+[node name="win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3oqr4")
+pitch_scale = 1.2
+autoplay = true
