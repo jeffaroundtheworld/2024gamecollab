@@ -20,7 +20,7 @@ shape = SubResource("BoxShape3D_bm5pc")
 
 [node name="keycardgrab" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_7ogxa")
-volume_db = 10.592
+volume_db = 13.481
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="keycardgrab" to="." method="_on_keycardgrab_finished"]

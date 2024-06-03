@@ -9,5 +9,10 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		Globals.ending = 1
-		queue_free()
+		Globals.ending += 1
+		$keycardgrab.play()
+
+
+
+func _on_keycardgrab_finished():
+	queue_free()
