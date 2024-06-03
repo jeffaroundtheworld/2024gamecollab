@@ -1,16 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://mrle1wv4k17n"]
+[gd_scene load_steps=8 format=3 uid="uid://mrle1wv4k17n"]
 
 [ext_resource type="Script" path="res://Menu Screen/options_screen.gd" id="1_4xjp1"]
-[ext_resource type="FontFile" uid="uid://cg28j4nv6x0wj" path="res://Menu Screen/fonts/Heartless.ttf" id="3_ef61n"]
-[ext_resource type="Texture2D" uid="uid://jvlweu4idad" path="res://Menu Screen/Controls screen/mouseicon.png" id="5_6ahe5"]
-[ext_resource type="Texture2D" uid="uid://duh3idiioekrv" path="res://Menu Screen/Controls screen/space-button-icon.png" id="5_6v76h"]
-[ext_resource type="Texture2D" uid="uid://cxcj6guxcmi08" path="res://Menu Screen/Controls screen/wasdd.png" id="5_htbl1"]
-[ext_resource type="Texture2D" uid="uid://c4e5c455os501" path="res://Menu Screen/Controls screen/images.png" id="6_v4gxb"]
+[ext_resource type="FontFile" uid="uid://du6vxte0j3p3u" path="res://Menu Screen/fonts/Heartless.ttf" id="3_ef61n"]
+[ext_resource type="Texture2D" uid="uid://c47oc83hwfloy" path="res://Menu Screen/Controls screen/mouseicon.png" id="5_6ahe5"]
+[ext_resource type="Texture2D" uid="uid://cjwqu7sb107k2" path="res://Menu Screen/Controls screen/space-button-icon.png" id="5_6v76h"]
+[ext_resource type="Texture2D" uid="uid://dp2e45t8b3uqj" path="res://Menu Screen/Controls screen/wasdd.png" id="5_htbl1"]
+[ext_resource type="Texture2D" uid="uid://c0kncds21g13k" path="res://Menu Screen/escape button.png" id="6_k5g8k"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_xqisd"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xuyrl"]
-load_path = "res://.godot/imported/escape button.png-2706a77204ca2529131a8b71c543b666.ctex"
 
 [node name="OptionsScreen" type="Control"]
 self_modulate = Color(0.309804, 0.309804, 0.309804, 1)
@@ -39,15 +36,14 @@ offset_top = 582.0
 offset_right = 666.0
 offset_bottom = 627.0
 theme_override_fonts/font = ExtResource("3_ef61n")
-theme_override_font_sizes/font_size = 27
-text = "Main Menu"
+text = "Back to Main Menu"
 
 [node name="Move" type="Label" parent="."]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 331.0
-offset_right = 302.0
-offset_bottom = 475.0
+offset_left = 95.0
+offset_top = 306.0
+offset_right = 333.0
+offset_bottom = 450.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ef61n")
 theme_override_font_sizes/font_size = 50
@@ -55,10 +51,10 @@ text = "Move"
 
 [node name="Look Around" type="Label" parent="."]
 layout_mode = 0
-offset_left = 236.0
-offset_top = 329.0
-offset_right = 474.0
-offset_bottom = 473.0
+offset_left = 322.0
+offset_top = 298.0
+offset_right = 560.0
+offset_bottom = 442.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ef61n")
 theme_override_font_sizes/font_size = 50
@@ -67,10 +63,10 @@ text = "Look Around
 
 [node name="Jump" type="Label" parent="."]
 layout_mode = 0
-offset_left = 530.0
-offset_top = 332.0
-offset_right = 768.0
-offset_bottom = 476.0
+offset_left = 685.0
+offset_top = 302.0
+offset_right = 923.0
+offset_bottom = 446.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ef61n")
 theme_override_font_sizes/font_size = 50
@@ -90,26 +86,14 @@ text = "Controls
 
 [node name="Main Menu" type="Label" parent="."]
 layout_mode = 0
-offset_left = 709.0
-offset_top = 330.0
-offset_right = 920.0
-offset_bottom = 474.0
+offset_left = 913.0
+offset_top = 302.0
+offset_right = 1124.0
+offset_bottom = 446.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ef61n")
 theme_override_font_sizes/font_size = 50
 text = "Main Menu"
-
-[node name="Cutscene" type="Label" parent="."]
-layout_mode = 0
-offset_left = 925.0
-offset_top = 334.0
-offset_right = 1136.0
-offset_bottom = 483.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ef61n")
-theme_override_font_sizes/font_size = 50
-text = "Cutscene
-"
 
 [node name="Instructions" type="Label" parent="."]
 layout_mode = 0
@@ -126,30 +110,24 @@ or abandon your friend to save yourself...
 horizontal_alignment = 1
 
 [node name="Wasd" type="Sprite2D" parent="."]
-position = Vector2(112.25, 490.125)
-scale = Vector2(0.272461, 0.297363)
+position = Vector2(133.75, 477)
+scale = Vector2(0.356445, 0.348633)
 texture = ExtResource("5_htbl1")
 
 [node name="Mouseicon" type="Sprite2D" parent="."]
-position = Vector2(316, 485)
-scale = Vector2(0.223757, 0.186202)
+position = Vector2(426, 466)
+scale = Vector2(0.309392, 0.247774)
 texture = ExtResource("5_6ahe5")
 
 [node name="Space-button-icon" type="Sprite2D" parent="."]
-position = Vector2(573, 511)
+position = Vector2(717, 484)
 scale = Vector2(0.408692, 0.383152)
 texture = ExtResource("5_6v76h")
 
 [node name="Escape Button" type="Sprite2D" parent="."]
 self_modulate = Color(0.309804, 0.309804, 0.309804, 1)
-position = Vector2(793, 511)
+position = Vector2(999, 487)
 scale = Vector2(0.408692, 0.383152)
-texture = SubResource("CompressedTexture2D_xuyrl")
-
-[node name="Enter Button" type="Sprite2D" parent="."]
-self_modulate = Color(0.309804, 0.309804, 0.309804, 1)
-position = Vector2(1005.72, 509.943)
-scale = Vector2(0.481355, 0.450213)
-texture = ExtResource("6_v4gxb")
+texture = ExtResource("6_k5g8k")
 
 [connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
