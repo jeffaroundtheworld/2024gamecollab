@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxwljrq7n1nv6"]
 
-[ext_resource type="FontFile" uid="uid://du6vxte0j3p3u" path="res://Menu Screen/fonts/Heartless.ttf" id="1_7c61q"]
+[ext_resource type="FontFile" uid="uid://dwxbyg4jv163t" path="res://Menu Screen/fonts/Heartless.ttf" id="1_7c61q"]
 [ext_resource type="VideoStream" path="res://Menu Screen/menu video/20240501100004.ogv" id="2_wtb00"]
 [ext_resource type="Script" path="res://Menu Screen/menu.gd" id="3_wf725"]
 
@@ -30,10 +30,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.036
 anchor_right = -0.036
-offset_left = 44.048
-offset_top = 400.0
-offset_right = 326.048
-offset_bottom = 557.0
+offset_left = 60.048
+offset_top = 305.0
+offset_right = 342.048
+offset_bottom = 462.0
 rotation = 0.122173
 theme_override_colors/font_hover_color = Color(0.352941, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_7c61q")
@@ -44,12 +44,11 @@ script = ExtResource("3_wf725")
 
 [node name="congrats" type="Label" parent="."]
 layout_mode = 0
-offset_left = 86.0
-offset_top = 26.0
-offset_right = 792.0
-offset_bottom = 363.0
+offset_left = 45.0
+offset_top = 198.0
+offset_right = 1145.0
+offset_bottom = 342.0
 rotation = 0.122173
 theme_override_fonts/font = ExtResource("1_7c61q")
-theme_override_font_sizes/font_size = 115
-text = "You escaped & 
-Saved Your Friend"
+theme_override_font_sizes/font_size = 100
+text = "You and your friend escaped"
