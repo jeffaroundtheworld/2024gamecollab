@@ -47,13 +47,13 @@ var dialogue2 = [
 	
 var dialogue3 = [
 	'space',
-	'You want me to just wait here? I..I guess so. Though if you do find the keycard...Well..Take care.',
-	'Goodbye'
+	'You want me to just wait here? I..I guess so. Though if you do find the keycard...wait..LOOK OUT! ITS ONE OF THEM!',
+	'Where-'
 ]
 var dialogue4 = [
 	'space',
-	'Sasha....Please stay safe. Ill do my best to stay calm here...Thank you.',
-	'Youre my best friend. Id do anything for you. Ill be back soon.'
+	'Sasha....Please stay safe. Ill do my best to stay calm here...Thank you..I-..wait, LOOK OUT! ITS ONE OF THEM!',
+	'Wait-'
 ]
 var dialogue_list = 0
 var finished = false
@@ -96,7 +96,7 @@ func play_dialogue():
 
 
 func _process(delta):
-	if Input.is_action_just_pressed("enter"):
+	if Input.is_action_just_pressed("enter") or Input.is_action_just_pressed("jump"):
 		if $choice1.visible == true:
 			pass
 		elif $choice2.visible == true:

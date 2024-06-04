@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://f3q8s0ao4npi"]
+
+[ext_resource type="Script" path="res://keycardtext.gd" id="1_wvjik"]
+[ext_resource type="FontFile" uid="uid://cmry0ff1h2oaq" path="res://dialogue scene/SplendidB.ttf" id="2_dedtk"]
+
+[sub_resource type="Theme" id="Theme_t80tl"]
+default_font = ExtResource("2_dedtk")
+
+[node name="keycardtext" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wvjik")
+
+[node name="text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 468.0
+offset_right = 984.0
+offset_bottom = 502.0
+theme = SubResource("Theme_t80tl")
+theme_override_colors/font_color = Color(0.819608, 0.780392, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 35
+text = "The keycard! I could go back and save her..."
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
