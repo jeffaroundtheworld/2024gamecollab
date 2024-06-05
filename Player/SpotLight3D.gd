@@ -16,12 +16,3 @@ func _process(delta):
 		await get_tree().create_timer(randf_range(0.1, MAX_TIME)).timeout
 		light_energy = 1
 		$AudioStreamPlayer3D.play()
-		
-	if Input.is_action_just_pressed("on"):
-
-		$AudioStreamPlayer3D.play()
-		if light_energy==1:
-			light_energy=0
-		else:
-			light_energy=1
-
