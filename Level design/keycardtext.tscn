@@ -6,21 +6,14 @@
 [sub_resource type="Theme" id="Theme_t80tl"]
 default_font = ExtResource("2_dedtk")
 
-[node name="keycardtext" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="keycardtext" type="CanvasLayer"]
 script = ExtResource("1_wvjik")
 
 [node name="text" type="Label" parent="."]
-layout_mode = 0
 offset_left = 199.0
-offset_top = 468.0
+offset_top = 528.0
 offset_right = 984.0
-offset_bottom = 502.0
+offset_bottom = 562.0
 theme = SubResource("Theme_t80tl")
 theme_override_colors/font_color = Color(0.819608, 0.780392, 0.741176, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
